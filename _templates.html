@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index des templates — Journal des Investisseurs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.svg">
+<style>
+  .templates-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap:18px;
+    margin:24px 0;
+  }
+  .tpl-card{
+    border:2px solid var(--ink);
+    background:var(--paper-2);
+    padding:20px 22px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .tpl-card .num{
+    position:absolute;top:-13px;left:18px;
+    background:var(--paper);
+    padding:0 8px;
+    font-family:"IM Fell English",serif;
+    font-size:11px;
+    color:var(--sepia);
+    letter-spacing:.15em;
+  }
+  .tpl-card h3{
+    font-family:"IM Fell English SC",serif;
+    font-weight:400;
+    font-size:24px;
+    letter-spacing:.04em;
+    margin-bottom:8px;
+  }
+  .tpl-card .file{
+    font-family:"Special Elite",monospace;
+    font-size:12px;
+    color:var(--sepia);
+    margin-bottom:10px;
+    word-break:break-all;
+  }
+  .tpl-card p{
+    font-size:14.5px;
+    line-height:1.55;
+    margin-bottom:14px;
+    flex-grow:1;
+  }
+  .tpl-card .open-btn{
+    display:inline-block;
+    font-family:"IM Fell English SC",serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-decoration:none;
+    color:var(--paper);
+    background:var(--ink);
+    padding:8px 18px;
+    text-align:center;
+    border:1px solid var(--ink);
+    transition:all .15s;
+  }
+  .tpl-card .open-btn:hover{background:var(--sepia);border-color:var(--sepia)}
+  .tpl-card .role{
+    font-family:"IM Fell English",serif;
+    font-style:italic;
+    font-size:11px;
+    color:var(--sepia);
+    margin-bottom:8px;
+    letter-spacing:.05em;
+  }
+  .summary-box{
+    border:2px solid var(--ink);
+    padding:20px 28px;
+    background:var(--paper-2);
+    margin:24px 0;
+    position:relative;
+  }
+  .summary-box::before{
+    content:"Brief de production";
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--paper);
+    padding:0 10px;
+    font-family:"IM Fell English SC",serif;
+    font-size:12px;
+    letter-spacing:.15em;
+  }
+  .summary-box ul{margin:0 0 0 24px;font-size:15px;line-height:1.7}
+  .summary-box li{margin-bottom:6px}
+  .summary-box strong{font-family:"IM Fell English SC",serif;font-weight:400;letter-spacing:.04em}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="ornament">— Maquettes prêtes au tirage · Édition de prévisualisation —</div>
+    <h1 class="title-site">Le Journal des Investisseurs</h1>
+    <div class="latin">Index des templates · à valider avant mise en page WordPress</div>
+    <div class="rule-thick"></div>
+  </header>
+
+  <header class="page-header">
+    <div class="kicker">Bibliothèque de maquettes · 9 templates HTML</div>
+    <h1>Templates de la maison</h1>
+    <p class="subtitle">Tous les gabarits du site sont autoportants, basés sur la feuille de style commune <em>assets/style.css</em>. Demain, après acquisition du nom de domaine, ces gabarits seront convertis en thème WordPress avec Bricks Builder.</p>
+  </header>
+
+  <div class="summary-box">
+    <ul>
+      <li><strong>Stack cible</strong> — WordPress dernière version · GeneratePress (thème léger) · Bricks Builder · RankMath SEO · WP Rocket · Plausible Analytics.</li>
+      <li><strong>Polices</strong> — IM Fell English / IM Fell English SC / Old Standard TT / Special Elite (auto-hébergées en WOFF2 sur l'install WP finale).</li>
+      <li><strong>Palette</strong> — papier <code style="font-family:'Special Elite',monospace">#F1E8D0</code> · encre <code style="font-family:'Special Elite',monospace">#141414</code> · sépia <code style="font-family:'Special Elite',monospace">#5A4A35</code>. Zéro couleur autre.</li>
+      <li><strong>Emplacements vente de liens</strong> — encarts <em>Annonce</em> en footer de chaque page + encarts <em>Encart partenaire</em> intégrés à 2 endroits dans chaque article single.</li>
+      <li><strong>Cocons SEO préparés</strong> — 6 rubriques × 3 thématiques × 4 entrées = 72 sous-pages de niveau 2 prêtes à recevoir du contenu.</li>
+      <li><strong>À compléter avant prod</strong> — mentions légales (NEWP SAS / SIRET / hébergeur), tarifs annonceurs, NAP postale réelle, formulaire contact (action POST), ticker en JS si cotations en temps réel souhaitées.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title"><em>Les neuf gabarits</em></h2>
+
+  <div class="templates-grid">
+
+    <div class="tpl-card">
+      <div class="num">N° 1</div>
+      <div class="role">Page d'accueil</div>
+      <h3>Home</h3>
+      <div class="file">index.html</div>
+      <p>Vitrine principale : masthead, ticker, navigation 6 rubriques avec mega-menus, grille 3 colonnes (rumeurs + article hero + cotations), 4 chroniques, 3 encarts partenaires.</p>
+      <a href="index.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 2</div>
+      <div class="role">Rubrique de niveau 1</div>
+      <h3>Page Rubrique</h3>
+      <div class="file">rubrique.html</div>
+      <p>Listing d'une grande rubrique (ex. Bourse) avec présentation des sous-thématiques, 8 articles en grille 2 colonnes, encart partenaires intermédiaire, pagination.</p>
+      <a href="rubrique.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 3</div>
+      <div class="role">Rubrique de niveau 2</div>
+      <h3>Page Sous-rubrique</h3>
+      <div class="file">sous-rubrique.html</div>
+      <p>Listing d'une thématique ciblée (ex. Lingots d'or) avec breadcrumb à 3 niveaux, listing d'articles plus dense, encart partenaires sectoriel.</p>
+      <a href="sous-rubrique.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 4</div>
+      <div class="role">Pièce maîtresse</div>
+      <h3>Article Single</h3>
+      <div class="file">article.html</div>
+      <p>Article long format : drop cap, blockquote, H2 surlignés, listes, deux encarts partenaires intégrés au corps, articles connexes en pied. <strong>C'est ici que se logent les liens vendus.</strong></p>
+      <a href="article.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 5</div>
+      <div class="role">Page institutionnelle</div>
+      <h3>La Rédaction</h3>
+      <div class="file">a-propos.html</div>
+      <p>Présentation de la maison, ligne éditoriale, équipe à 3 (Sébastien · DP, Kévin · RC, Bertrand · métaux précieux) avec sceaux monogrammes entrelacés et attributs emblématiques (plume, laurier, soleil), méthode et engagements.</p>
+      <a href="a-propos.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 6</div>
+      <div class="role">Page commerciale</div>
+      <h3>Annoncer</h3>
+      <div class="file">annoncer.html</div>
+      <p>Landing page annonceurs : audience, 3 formules tarifées (490 € / 1 290 € / 3 490 €), charte éditoriale partenaires, références. <strong>Le moteur de revenus du site.</strong></p>
+      <a href="annoncer.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 7</div>
+      <div class="role">Page utilitaire</div>
+      <h3>Contact</h3>
+      <div class="file">contact.html</div>
+      <p>Formulaire de contact stylé vintage avec sélecteur d'objet, adresse postale, redirections vers la régie partenaires, délais de réponse annoncés.</p>
+      <a href="contact.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 8</div>
+      <div class="role">Page légale</div>
+      <h3>Mentions légales</h3>
+      <div class="file">mentions-legales.html</div>
+      <p>Identité éditeur, hébergement, propriété intellectuelle, avertissement éditorial financier, encarts partenaires, RGPD, cookies, droit applicable.</p>
+      <a href="mentions-legales.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+    <div class="tpl-card">
+      <div class="num">N° 9</div>
+      <div class="role">Page d'erreur</div>
+      <h3>404</h3>
+      <div class="file">404.html</div>
+      <p>« Cette page n'a jamais paru ». Code 404 en grand IM Fell English, retour à la une, lien vers chaque rubrique pour ne pas perdre le visiteur.</p>
+      <a href="404.html" class="open-btn">Ouvrir →</a>
+    </div>
+
+  </div>
+
+  <h2 class="section-title"><em>Ce qu'il restera à faire</em></h2>
+
+  <div class="static-page" style="max-width:780px;margin:0 auto">
+    <section>
+      <h2>Quand tu auras acheté le NDD</h2>
+      <ul>
+        <li><strong>Choix de l'hébergement</strong> — mutualisé NEWP (mobc) ou compte Hostinger dédié.</li>
+        <li><strong>Installation WordPress</strong> — install standard, GeneratePress + Bricks, suppression des plugins inutiles.</li>
+        <li><strong>Conversion des templates en thème enfant</strong> — header.php, footer.php, single.php, archive.php, page.php, 404.php à partir des HTML actuels.</li>
+        <li><strong>Hébergement des polices Google Fonts en WOFF2 local</strong> — pour la perf et l'indépendance.</li>
+        <li><strong>Création des 6 catégories + 18 sous-catégories</strong> — selon l'arbo des mega-menus.</li>
+        <li><strong>Configuration RankMath</strong> — schemas Article + Organization + BreadcrumbList, OG-tags, sitemap.</li>
+        <li><strong>Premier batch d'articles</strong> — 10 articles de fondation (1 par sous-thématique signature).</li>
+        <li><strong>Mise en ligne et tests</strong> — formulaire contact, responsive 8 devices, lighthouse > 90.</li>
+        <li><strong>Soumission Search Console + Bing</strong> — sitemap + robots.txt.</li>
+        <li><strong>Première vague d'annonceurs</strong> — démarchage des cabinets de gestion, comptoirs aurifères, courtiers crédit.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Décisions encore en attente</h2>
+      <ul>
+        <li><strong>NDD définitif</strong> — <em>journal-des-investisseurs.fr</em> ou variante (gazette-, lejournal-, etc.).</li>
+        <li><strong>Hébergeur</strong> — mobc mutualisé ou compte dédié (recommandé pour isolation footprint).</li>
+        <li><strong>Tarifs annonceurs</strong> — confirmer les paliers (490 / 1 290 / 3 490 € ou autre).</li>
+        <li><strong>Ticker temps réel ou figé</strong> — ticker actuel est statique. Pour temps réel, prévoir API (Yahoo Finance, finnhub, etc.).</li>
+        <li><strong>Élargir l'équipe</strong> — actuellement 3 vrais rédacteurs (Sébastien, Kévin, Bertrand). Recruter d'autres signatures réelles pour étoffer les rubriques Immobilier / Crypto / Patrimoine ?</li>
+        <li><strong>Newsletter</strong> — « Lettre confidentielle » mentionnée partout : la lancer dès J+0 ou attendre 30 articles ?</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="ornament">· · · · ·</div>
+    <strong>Le Journal des Investisseurs</strong> — Bibliothèque de templates<br>
+    <em>Maquettes produites le 21 mai 2026 · prêtes à être mises en thème WordPress</em>
+    <div class="footer-nav">
+      <a href="index.html">Accueil</a> ·
+      <a href="rubrique.html">Rubrique</a> ·
+      <a href="sous-rubrique.html">Sous-rubrique</a> ·
+      <a href="article.html">Article</a> ·
+      <a href="a-propos.html">La Rédaction</a> ·
+      <a href="annoncer.html">Annoncer</a> ·
+      <a href="contact.html">Contact</a> ·
+      <a href="mentions-legales.html">Mentions légales</a> ·
+      <a href="404.html">404</a>
+    </div>
+    <div class="ornament" style="margin-top:10px">· · · · ·</div>
+  </footer>
+
+</div>
+
+</body>
+</html>

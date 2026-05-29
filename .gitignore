@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temp
+*.tmp
+*.bak
+*.log
+
+# Local notes (ne pas pusher)
+NOTES.md
+TODO.md

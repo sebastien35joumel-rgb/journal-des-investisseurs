@@ -1,0 +1,17 @@
+# Le Journal des Investisseurs — robots.txt
+# https://journal-des-investisseurs.fr
+
+User-agent: *
+Allow: /
+
+# Templates génériques (contenu factice, non destiné à l'indexation)
+Disallow: /_templates.html
+Disallow: /article.html
+Disallow: /rubrique.html
+Disallow: /sous-rubrique.html
+
+# Page d'erreur
+Disallow: /404.html
+
+# Sitemap
+Sitemap: https://journal-des-investisseurs.fr/sitemap.xml
