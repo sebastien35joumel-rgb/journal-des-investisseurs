@@ -171,6 +171,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ARCHIVES -->
+  <url>
+    <loc>https://journal-des-investisseurs.fr/archives.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- PAGES INSTITUTIONNELLES -->
   <url>
     <loc>https://journal-des-investisseurs.fr/a-propos.html</loc>
