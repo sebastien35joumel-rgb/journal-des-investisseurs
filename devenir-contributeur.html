@@ -55,12 +55,27 @@
     width:20px;height:20px;margin-top:3px;flex-shrink:0;cursor:pointer;accent-color:#141414;
   }
   .checkbox-block label{font-family:"Old Standard TT",serif;font-size:14px;line-height:1.55;cursor:pointer;margin:0;letter-spacing:0;color:#141414;text-transform:none}
+  /* Grille de cases à cocher pour les sujets */
+  .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+  .topics-group{border:1px solid #141414;padding:10px 12px 8px;background:rgba(241,232,208,0.45)}
+  .topics-group legend{font-family:"IM Fell English SC",serif;font-size:11px;letter-spacing:.18em;padding:0 6px;color:#141414}
+  .topics-group label{display:flex;align-items:flex-start;gap:6px;font-family:"Old Standard TT",serif;font-size:13px;line-height:1.35;letter-spacing:0;text-transform:none;color:#141414;margin:5px 0;cursor:pointer;font-weight:400}
+  .topics-group input[type=checkbox]{width:15px;height:15px;margin-top:1px;flex-shrink:0;accent-color:#141414;cursor:pointer}
+  .topics-other{margin-top:10px}
+  .topics-other label{font-family:"IM Fell English SC",serif;font-size:12px;letter-spacing:.15em;display:block;margin-bottom:4px}
+  .topics-other input[type=text]{width:100%;background:var(--paper);border:1px solid #141414;padding:6px 10px;font-family:"Old Standard TT",serif;font-size:14px;color:#141414;outline:none}
+  .topics-other input[type=text]:focus{border-color:#5A4A35;background:#fff8e8}
+  @media (max-width:960px){
+    .topics-grid{grid-template-columns:repeat(2,1fr)}
+  }
   @media (max-width:560px){
     .form-vintage .field-group{grid-template-columns:1fr;gap:0}
     .form-vintage .field-group .field{margin-bottom:14px}
     .legal-block{padding:14px 16px}
     .legal-block ul{margin-left:16px}
     .legal-block li{font-size:13px}
+    .topics-grid{grid-template-columns:1fr;gap:10px}
+    .topics-group label{font-size:13.5px}
   }
 </style>
 </head>
@@ -121,7 +136,7 @@
     <section>
       <h2>Formulaire de candidature</h2>
 
-      <form class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
+      <form id="contribForm" class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
         <input type="hidden" name="_subject" value="Candidature contributeur — Le Journal des Investisseurs">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
@@ -163,29 +178,50 @@
         <div class="section-divider">— Projet éditorial —</div>
 
         <div class="field">
-          <label for="sujets">Sujets de prédilection <span style="color:#6b1a1a">*</span></label>
-          <select id="sujets" name="Sujets" multiple required>
-            <option>Bourse · Marchés actions</option>
-            <option>Bourse · Instruments (ETF, PEA, obligations)</option>
-            <option>Bourse · Méthodes d'analyse</option>
-            <option>Immobilier · Marchés (ancien, neuf, prestige)</option>
-            <option>Immobilier · Stratégies (SCPI, LMNP, crowdfunding)</option>
-            <option>Immobilier · Fiscalité</option>
-            <option>Métaux précieux · Or</option>
-            <option>Métaux précieux · Autres métaux</option>
-            <option>Métaux précieux · Pratique du négoce</option>
-            <option>Cryptomonnaies · Bitcoin, Ethereum, altcoins</option>
-            <option>Cryptomonnaies · DeFi, NFT, Web3</option>
-            <option>Cryptomonnaies · Pratique et régulation</option>
-            <option>Patrimoine · Enveloppes (AV, PER, épargne)</option>
-            <option>Patrimoine · Transmission</option>
-            <option>Patrimoine · Placements alternatifs (art, vin, forêts)</option>
-            <option>Stratégie · Allocation d'actifs</option>
-            <option>Stratégie · Macroéconomie et géopolitique</option>
-            <option>Stratégie · Cycles, crises, histoire monétaire</option>
-            <option>Autre (préciser dans la bio)</option>
-          </select>
-          <span class="field-help">Maintenez Ctrl (Cmd sur Mac) pour sélectionner plusieurs sujets.</span>
+          <label>Sujets de prédilection <span style="color:#6b1a1a">*</span></label>
+          <div class="topics-grid" id="topicsGrid">
+            <fieldset class="topics-group">
+              <legend>Bourse</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Bourse · Marchés actions"> Marchés actions</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Bourse · Instruments (ETF, PEA, obligations)"> Instruments (ETF, PEA, obligations)</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Bourse · Méthodes d'analyse"> Méthodes d'analyse</label>
+            </fieldset>
+            <fieldset class="topics-group">
+              <legend>Immobilier</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Immobilier · Marchés (ancien, neuf, prestige)"> Marchés (ancien, neuf, prestige)</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Immobilier · Stratégies (SCPI, LMNP, crowdfunding)"> Stratégies (SCPI, LMNP, crowdfunding)</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Immobilier · Fiscalité"> Fiscalité</label>
+            </fieldset>
+            <fieldset class="topics-group">
+              <legend>Métaux précieux</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Métaux précieux · Or"> Or</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Métaux précieux · Autres métaux"> Autres métaux</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Métaux précieux · Pratique du négoce"> Pratique du négoce</label>
+            </fieldset>
+            <fieldset class="topics-group">
+              <legend>Cryptomonnaies</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Cryptomonnaies · Bitcoin, Ethereum, altcoins"> Bitcoin, Ethereum, altcoins</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Cryptomonnaies · DeFi, NFT, Web3"> DeFi, NFT, Web3</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Cryptomonnaies · Pratique et régulation"> Pratique et régulation</label>
+            </fieldset>
+            <fieldset class="topics-group">
+              <legend>Patrimoine</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Patrimoine · Enveloppes (AV, PER, épargne)"> Enveloppes (AV, PER, épargne)</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Patrimoine · Transmission"> Transmission</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Patrimoine · Placements alternatifs (art, vin, forêts)"> Placements alternatifs (art, vin, forêts)</label>
+            </fieldset>
+            <fieldset class="topics-group">
+              <legend>Stratégie</legend>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Stratégie · Allocation d'actifs"> Allocation d'actifs</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Stratégie · Macroéconomie et géopolitique"> Macroéconomie et géopolitique</label>
+              <label><input type="checkbox" name="Sujets de prédilection" value="Stratégie · Cycles, crises, histoire monétaire"> Cycles, crises, histoire monétaire</label>
+            </fieldset>
+          </div>
+          <div class="topics-other">
+            <label for="sujet_autre">Autre sujet (préciser)</label>
+            <input type="text" id="sujet_autre" name="Autre sujet">
+          </div>
+          <span class="field-help">Cochez tous les sujets pour lesquels vous souhaitez contribuer (au moins un).</span>
         </div>
 
         <div class="field">
@@ -302,5 +338,23 @@
     <div class="ornament" style="margin-top:10px">· · · · ·</div>
   </footer>
 </div>
+<script>
+(function(){
+  var form=document.getElementById('contribForm');
+  if(!form) return;
+  form.addEventListener('submit',function(e){
+    var grid=document.getElementById('topicsGrid');
+    var other=document.getElementById('sujet_autre');
+    if(!grid) return;
+    var checked=grid.querySelectorAll('input[type=checkbox]:checked').length;
+    var hasOther=other && other.value.trim().length>0;
+    if(checked===0 && !hasOther){
+      e.preventDefault();
+      alert('Veuillez cocher au moins un sujet de prédilection (ou renseigner un sujet personnalisé).');
+      grid.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+  });
+})();
+</script>
 </body>
 </html>
