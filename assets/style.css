@@ -1248,6 +1248,13 @@ footer.site-footer .footer-nav a:hover{font-style:italic}
   .article-body h2{font-size:21px;padding:6px 0}
   .pricing-card .price{font-size:28px}
   .error-page .code{font-size:90px}
+  footer.site-footer .footer-nav{font-size:9.5px;letter-spacing:.08em;line-height:1.8}
+  footer.site-footer .footer-nav a{margin:0 3px}
+  .home-archives-card h3{font-size:18px}
+  .home-archives-card .article-list{font-size:13px;line-height:1.7}
+  .home-archives-cta{padding:14px 12px}
+  .home-archives-cta .ornament{font-size:11px;letter-spacing:.3em}
+  .home-archives-intro{font-size:15px;padding:0 8px}
 }
 
 /* Réduction du ticker en mobile pour ne pas déborder */
@@ -1261,4 +1268,170 @@ footer.site-footer .footer-nav a:hover{font-style:italic}
 @media (max-width:560px){
   .col-right .quotes-table,
   .col-left .quotes-table{display:block;overflow-x:auto;white-space:nowrap;max-width:100%}
+}
+
+/* ============ SECTION "Toutes nos publications" (HOME) ============ */
+.home-archives-intro{
+  text-align:center;
+  font-family:"Old Standard TT",serif;
+  font-style:italic;
+  font-size:17px;
+  color:var(--sepia);
+  margin:8px auto 24px;
+  max-width:720px;
+}
+.home-archives-intro a{
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  text-decoration:none;
+}
+.home-archives-card h3{
+  border-bottom:1px solid var(--ink);
+  padding-bottom:6px;
+  margin-bottom:10px;
+}
+.home-archives-card .article-list{
+  font-size:13px;
+  line-height:1.6;
+  margin:0;
+}
+.home-archives-card .article-list a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px dotted var(--sepia);
+}
+.home-archives-card .article-list a:hover{
+  color:var(--sepia);
+  border-bottom-color:var(--ink);
+}
+.home-archives-cta{
+  grid-column:span 2;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:18px;
+  background:var(--paper-2);
+  border:1px solid var(--ink);
+}
+.home-archives-cta .ornament{
+  font-family:"IM Fell English",serif;
+  color:var(--sepia);
+  letter-spacing:.4em;
+  margin-bottom:8px;
+  font-size:13px;
+}
+.home-archives-cta h3{margin-bottom:8px}
+.home-archives-cta h3 a{color:var(--ink);text-decoration:none}
+.home-archives-cta h3 a:hover{color:var(--sepia);font-style:italic}
+.home-archives-cta p{
+  font-size:13.5px;
+  line-height:1.5;
+  margin-bottom:10px;
+}
+.home-archives-cta .cta-link{
+  font-family:"IM Fell English SC",serif;
+  font-size:11px;
+  letter-spacing:.18em;
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:2px;
+  display:inline-block;
+}
+.home-archives-cta .cta-link:hover{color:var(--sepia);border-bottom-color:var(--sepia)}
+
+/* Responsive home archives : 2 cards par ligne dès 960px, 1 carte par ligne en < 560px */
+@media (max-width:960px){
+  .home-archives-cta{grid-column:span 2}
+}
+@media (max-width:560px){
+  .home-archives-cta{grid-column:span 1}
+  .home-archives-cta h3{font-size:18px}
+  .home-archives-cta p{font-size:13px}
+  .home-archives-card .article-list{font-size:13.5px}
+}
+
+/* ============ PAGE ARCHIVES ============ */
+.archives-section{margin:32px 0;padding-bottom:24px;border-bottom:3px double var(--ink)}
+.archives-section:last-child{border-bottom:none}
+.archives-section h2.section-rubrique{
+  font-family:"IM Fell English SC",serif;
+  font-weight:400;
+  font-size:32px;
+  letter-spacing:.08em;
+  text-align:center;
+  margin-bottom:6px;
+}
+.archives-section .section-meta{
+  font-family:"IM Fell English",serif;
+  font-style:italic;
+  font-size:14px;
+  color:var(--sepia);
+  text-align:center;
+  margin-bottom:24px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--ink);
+}
+.archives-list{display:grid;grid-template-columns:1fr;gap:0}
+.archives-list article{
+  padding:18px 0;
+  border-bottom:1px dotted var(--ink);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:start;
+}
+.archives-list article:last-child{border-bottom:none}
+.archives-list h3{
+  font-family:"IM Fell English SC",serif;
+  font-weight:400;
+  font-size:22px;
+  line-height:1.2;
+  margin-bottom:6px;
+}
+.archives-list h3 a{color:var(--ink);text-decoration:none}
+.archives-list h3 a:hover{color:var(--sepia);font-style:italic}
+.archives-list .archive-meta{
+  font-family:"IM Fell English",serif;
+  font-style:italic;
+  font-size:12.5px;
+  color:var(--sepia);
+  margin-bottom:6px;
+}
+.archives-list .archive-excerpt{
+  font-size:14.5px;
+  line-height:1.55;
+  color:var(--ink-soft);
+  text-align:justify;
+  hyphens:auto;
+}
+.archives-list .read-link{
+  font-family:"IM Fell English SC",serif;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-decoration:none;
+  color:var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding-bottom:2px;
+  white-space:nowrap;
+  align-self:start;
+}
+.archives-list .read-link:hover{
+  color:var(--sepia);
+  border-bottom-color:var(--sepia);
+}
+@media (max-width:560px){
+  .archives-list article{grid-template-columns:1fr;padding:14px 0}
+  .archives-list .read-link{justify-self:start;margin-top:8px}
+  .archives-section h2.section-rubrique{font-size:24px;letter-spacing:.05em}
+  .archives-section .section-meta{font-size:12px;padding-bottom:10px;margin-bottom:18px}
+  .archives-list h3{font-size:18px}
+  .archives-list .archive-excerpt{font-size:14px}
+}
+@media (max-width:380px){
+  .archives-section h2.section-rubrique{font-size:20px}
+  .archives-list h3{font-size:16px}
+  .archives-list .archive-excerpt{font-size:13.5px}
+  .archives-list .archive-meta{font-size:11.5px}
 }
