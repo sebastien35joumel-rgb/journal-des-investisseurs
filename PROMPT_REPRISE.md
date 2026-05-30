@@ -55,11 +55,29 @@ STRUCTURE DA (à respecter pour tout nouveau contenu)
 
 À FAIRE IMMÉDIATEMENT (action de Claude)
 1. Vérifier que HTTPS est actif sur https://journal-des-investisseurs.fr/
-   (curl -sI ou navigateur). Si oui :
+   (curl -sI ou navigateur). Si HTTP 200 OK en HTTPS :
    gh api -X PUT repos/sebastien35joumel-rgb/journal-des-investisseurs/pages \
      -f https_enforced=true
+   Si pas encore prêt : c'est normal, Let's Encrypt prend jusqu'à 24h pour un
+   nouveau domaine. Vérifier toutes les 2-3h. Le champ `protected_domain_state`
+   sur l'API Pages doit passer de `null` à `verified` quand le cert est prêt.
 2. Vérifier que le site répond bien sur toutes les pages clés (curl + status)
+   - Home, archives.html, rubrique-metaux.html, article-lingot-or-kilogramme.html
 3. Tester PageSpeed Insights (cible > 90 desktop)
+
+STRUCTURE DE NAVIGATION COMPLÈTE (à connaître)
+Depuis la home, on accède à TOUS les articles en 1-2 clics :
+- Brèves col gauche (4 articles)
+- Article hero (1 article)
+- Cotations + Avis du Banquier
+- Section "Chroniques de la semaine" (4 articles)
+- Section "Toutes nos publications" (6 cartes mini-rubrique + 1 carte archives,
+  total 18 articles directement linkés)
+- Encarts annonces
+- Footer-nav universel : Accueil · Archives · La Rédaction · Annoncer ·
+  Contact · Mentions légales
+
+La page archives.html liste les 19 articles classés en 6 sections avec extraits.
 
 À FAIRE PAR SÉBASTIEN (actions UI)
 - Envoyer un message test depuis le formulaire contact.html, ouvrir email
