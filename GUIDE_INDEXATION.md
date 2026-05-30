@@ -1,7 +1,26 @@
 # Guide d'indexation — Le Journal des Investisseurs
 
 > Procédure pas-à-pas pour soumettre le site aux moteurs de recherche.
-> À faire après que HTTPS soit actif (certificat Let's Encrypt délivré par GitHub Pages).
+
+---
+
+## ✅ Ce qui est DÉJÀ FAIT (au 30 mai 2026)
+
+- **IndexNow configuré** :
+  - Clé : `34853aeed5aae6cfaf10efcceae4e47e`
+  - Fichier de validation : `http://journal-des-investisseurs.fr/34853aeed5aae6cfaf10efcceae4e47e.txt` (en ligne)
+  - **105 URLs déjà pingées** (HTTP 200/202) → Bing + Yandex crawleront sous 24-72h
+  - Script réutilisable : `./ping-indexnow.sh [url]` pour les futures publications
+- **Emplacements meta verification préparés** dans `<head>` d'`index.html` (en commentaire HTML, à dé-commenter et compléter quand GSC/Bing fournissent leur valeur)
+- **robots.txt** déclare le sitemap + bloque templates/404/merci.html
+- **Sitemap.xml** : 105 URLs publiques prêtes à être crawlées
+
+## ⏳ Ce qui RESTE À FAIRE (toi, UI navigateur)
+
+1. **Activer HTTPS enforce GitHub Pages** (quand Let's Encrypt vert, cf. §0)
+2. **Créer propriété Google Search Console + soumettre sitemap** (§1)
+3. **Créer propriété Bing Webmaster** (importable depuis GSC en 1 clic, §2)
+4. (Optionnel) Activer IndexNow dans Bing Webmaster pour le voir lister les pings reçus
 
 ---
 
@@ -42,12 +61,14 @@ Google va proposer plusieurs méthodes. Choisir **Balise HTML** :
 
 → **Copier la balise complète** que Google fournit.
 
-Puis :
-1. M'envoyer la balise (je l'ajoute en `<head>` de `index.html`)
-2. OU l'ajouter toi-même dans `index.html`, ligne ~12, juste après le `<meta name="theme-color">`
-3. Commit + push
+Dans `index.html`, **l'emplacement est déjà préparé en commentaire** (lignes 8-9). Il suffit de :
+1. Décommenter la ligne `<!-- <meta name="google-site-verification" ... -->`
+2. Remplacer `A_REMPLACER_PAR_LA_VALEUR_GSC` par la vraie valeur de Google
+3. Commit + push (`git add index.html && git commit -m "feat(seo): meta GSC" && git push`)
 4. Attendre 2-3 min que GitHub Pages déploie
 5. Retour Search Console → **Valider**
+
+OU plus simple : m'envoyer la valeur, je fais le patch et le push.
 
 ### 1.3 Soumettre le sitemap
 
@@ -97,22 +118,34 @@ Idem que Google : balise HTML à ajouter dans `<head>`.
 
 Même procédure : me transmettre la balise ou l'ajouter dans `index.html`.
 
-### 2.3 IndexNow (bonus — push instantané)
+### 2.3 IndexNow (✅ DÉJÀ ACTIF — clé `34853aeed5aae6cfaf10efcceae4e47e`)
 
-Bing supporte le protocole IndexNow qui notifie les moteurs en push (pas besoin d'attendre un crawl). Très utile pour les futures publications d'articles.
+IndexNow notifie Bing & Yandex en push (pas besoin d'attendre un crawl). Pour le Journal des Investisseurs :
 
-1. Bing Webmaster Tools → **Paramètres** → **IndexNow**
-2. Générer une clé API → ex : `7b2c8d4e5f...`
-3. Créer un fichier `7b2c8d4e5f.txt` à la racine du repo, contenu = la clé elle-même
-4. Commit + push
-5. Activer dans Bing
+- **Clé** : `34853aeed5aae6cfaf10efcceae4e47e`
+- **Fichier de validation** : <http://journal-des-investisseurs.fr/34853aeed5aae6cfaf10efcceae4e47e.txt>
+- **Premier batch envoyé le 30 mai 2026** : 105 URLs (sitemap complet) acceptées (HTTP 200/202)
 
-Pour notifier une URL :
+#### Pour notifier une nouvelle URL (workflow futur)
+
+Script bash réutilisable à la racine du repo :
 ```bash
-curl "https://api.indexnow.org/indexnow?url=https://journal-des-investisseurs.fr/nouvel-article.html&key=7b2c8d4e5f"
+# Ping une URL unique
+./ping-indexnow.sh /article-nouveau.html
+
+# Ping plusieurs URLs
+./ping-indexnow.sh /article-A.html /article-B.html
+
+# Re-ping de tout le sitemap
+./ping-indexnow.sh
 ```
 
-Yandex utilise le même protocole. Une seule clé = 2 moteurs notifiés.
+#### Visualisation côté Bing (optionnel)
+
+Dans Bing Webmaster Tools → **Configurer mon site** → **IndexNow** :
+- Cocher *Use my own key*
+- Saisir la clé : `34853aeed5aae6cfaf10efcceae4e47e`
+- Bing affichera alors l'historique des pings reçus et le statut de chaque URL
 
 ---
 
