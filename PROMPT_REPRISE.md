@@ -10,27 +10,37 @@ d'analyse financière édité par NEWP SAS, signé Sébastien Joumel (Directeur 
 publication), Kévin Papot (Rédacteur en chef), Bertrand Mathieu (Chroniqueur
 métaux précieux, fondateur de Maison Or et Bijoux).
 
-État au 30 mai 2026 :
+État au 30 mai 2026 (commit ceab104) :
 
 SITE EN PROD
 - URL : http://journal-des-investisseurs.fr/ (HTTPS en cours de génération
-  par Let's Encrypt via GitHub Pages, devrait être actif dans la journée)
+  par Let's Encrypt via GitHub Pages, à activer dès cert vert)
 - Repo : https://github.com/sebastien35joumel-rgb/journal-des-investisseurs
   (public, branche main)
 - Hébergement : GitHub Pages (statique, gratuit, illimité)
 - DNS : Hostinger direct (4 A records vers GitHub 185.199.108-111.153 +
   CNAME www → sebastien35joumel-rgb.github.io), nameservers Hostinger par défaut
-- Propagation DNS confirmée (Google/Cloudflare/Quad9)
+- Propagation DNS confirmée
 - Compte GitHub : sebastien35joumel-rgb (gh CLI déjà authentifié via keyring)
 - Coût annuel : ~10 € (seul le NDD Hostinger)
 
-CONTENU EN PROD (au commit 075781b)
-- 35 fichiers HTML : 19 articles maîtres + 6 pages rubrique + 9 templates +
-  1 index navigation
+CONTENU EN PROD (au commit ceab104)
+- 110 fichiers HTML (108 publics + 404.html + _templates.html bloqués)
+- sitemap.xml = 105 URLs publiques
+- 19 articles maîtres signés
+- 6 pages rubrique (bourse, immobilier, métaux, crypto, patrimoine, stratégie)
+- 72 pages sous-rubrique distinctes (12 par rubrique majeure) — SEO longue traîne
+- 1 archives.html (classement des 19 articles en 6 sections)
+- 1 index.html (home magazine — brèves + hero + cotations + chroniques +
+  toutes publications + annonces)
+- Pages institutionnelles : a-propos, annoncer, contact, mentions-legales
+- Pages rédaction : devenir-contributeur.html (formulaire long avec sujets
+  en cases à cocher groupées par rubrique + upload portrait URL + droit à
+  l'image + déclaration illustrations libres de droits/sourcées), 
+  article-invite.html (formulaire article ponctuel équivalent)
 - CSS partagé : assets/style.css (DA vintage N&B "vieux journal financier")
 - 3 SVG (favicon, apple-touch-icon, og-image 1200×630)
-- sitemap.xml (30 URLs publiques) + robots.txt
-- Form contact branché sur FormSubmit (gratuit, forward vers contact@newp.fr)
+- robots.txt (disallow templates + 404, allow tout le reste)
 - 19 articles (~40 000 mots cumulés) ventilés :
   * Bertrand Mathieu (4) : lingot or 1kg, Napoléon 20F, argent métal,
     platine/palladium
@@ -39,6 +49,12 @@ CONTENU EN PROD (au commit 075781b)
     inflation persistante
   * Kévin Papot (7) : Bitcoin signal, ETH après Pectra, ETF dividendes,
     small caps, PEA 300k, stablecoins MiCA, recension Arte papier monnaie
+- Form contact + form contributeur + form article invité branchés sur
+  FormSubmit (gratuit, forward vers contact@newp.fr)
+
+FOOTER UNIVERSEL (cohérent sur les 108 pages publiques)
+Accueil · Archives · La Rédaction · Annoncer · Contact ·
+Intégrer la rédaction · Mentions légales
 
 STRUCTURE DA (à respecter pour tout nouveau contenu)
 - Palette : ivoire #F1E8D0, encre #141414, sépia #5A4A35 (aucune autre couleur)
@@ -53,41 +69,32 @@ STRUCTURE DA (à respecter pour tout nouveau contenu)
 - Format article HTML autoporteur (header complet + nav 6 rubriques avec
   mega-menus + breadcrumb + page-header + corps + sceau + related + footer)
 
-À FAIRE IMMÉDIATEMENT (action de Claude)
+DOCUMENTS DE RÉFÉRENCE À LA RACINE DU REPO
+- README.md : présentation projet
+- DEPLOIEMENT.md : procédure complète mise en ligne GitHub Pages + DNS
+- GUIDE_INDEXATION.md : procédure Google Search Console + Bing Webmaster +
+  IndexNow, à exécuter par Sébastien dès HTTPS actif
+- PROMPT_REPRISE.md (ce fichier) : transfert de session
+
+À FAIRE IMMÉDIATEMENT (action de Claude au démarrage)
 1. Vérifier que HTTPS est actif sur https://journal-des-investisseurs.fr/
-   (curl -sI ou navigateur). Si HTTP 200 OK en HTTPS :
+   (curl -sI). Si HTTP 200 OK en HTTPS :
    gh api -X PUT repos/sebastien35joumel-rgb/journal-des-investisseurs/pages \
      -f https_enforced=true
-   Si pas encore prêt : c'est normal, Let's Encrypt prend jusqu'à 24h pour un
-   nouveau domaine. Vérifier toutes les 2-3h. Le champ `protected_domain_state`
-   sur l'API Pages doit passer de `null` à `verified` quand le cert est prêt.
-2. Vérifier que le site répond bien sur toutes les pages clés (curl + status)
-   - Home, archives.html, rubrique-metaux.html, article-lingot-or-kilogramme.html
-3. Tester PageSpeed Insights (cible > 90 desktop)
+   Si pas encore prêt : c'est normal, Let's Encrypt prend jusqu'à 24-48h pour
+   un nouveau domaine. Vérifier toutes les 2-3h.
+2. Vérifier que le site répond bien sur des pages clés (curl + status)
+   - /, /archives.html, /devenir-contributeur.html, /article-invite.html
+3. Attendre les instructions de Sébastien
 
-STRUCTURE DE NAVIGATION COMPLÈTE (à connaître)
-Depuis la home, on accède à TOUS les articles en 1-2 clics :
-- Brèves col gauche (4 articles)
-- Article hero (1 article)
-- Cotations + Avis du Banquier
-- Section "Chroniques de la semaine" (4 articles)
-- Section "Toutes nos publications" (6 cartes mini-rubrique + 1 carte archives,
-  total 18 articles directement linkés)
-- Encarts annonces
-- Footer-nav universel : Accueil · Archives · La Rédaction · Annoncer ·
-  Contact · Mentions légales
-
-La page archives.html liste les 19 articles classés en 6 sections avec extraits.
-
-À FAIRE PAR SÉBASTIEN (actions UI)
-- Envoyer un message test depuis le formulaire contact.html, ouvrir email
-  contact@newp.fr, cliquer le lien d'activation FormSubmit (sans ça, aucun
-  message ne sera reçu en production)
-- Soumettre le sitemap à Google Search Console
-  (https://search.google.com/search-console) et Bing Webmaster Tools
+À FAIRE PAR SÉBASTIEN (actions UI, non automatisables)
+- Envoyer un message test depuis contact.html, ouvrir email contact@newp.fr,
+  cliquer le lien d'activation FormSubmit (sans ça, aucun message ne sera
+  reçu en production). À répéter pour devenir-contributeur et article-invite
+  si formulaires distincts.
+- Suivre GUIDE_INDEXATION.md (GSC + Bing + IndexNow) dès HTTPS vert
 
 PROCHAINS CHANTIERS POSSIBLES (à demander à Sébastien)
-- Sous-rubriques distinctes (12-18 pages pour SEO longue traîne)
 - Plus d'articles (objectif 30-40 à 3 mois, alterner Bertrand/Sébastien/Kévin)
 - Recensions documentaires (format signature) : sources validées par Sébastien =
   Arte +++, GDIY (Matthieu Stefani), Hasheur (Owen Simonin), Yann Darwin,
@@ -97,6 +104,8 @@ PROCHAINS CHANTIERS POSSIBLES (à demander à Sébastien)
 - Glossaire financier + FAQ par rubrique (cible PAA Google)
 - Démarchage premiers annonceurs (cabinets gestion, comptoirs aurifères,
   courtiers crédit, plateformes crypto agréées)
+- Schema.org NewsArticle sur les 19 articles éditoriaux
+- Ajout d'authors profile pages (a-propos individuels par rédacteur)
 
 CONTEXTE INDISPENSABLE
 - Voix narrative : "nous" (Sébastien + Kévin), vouvoiement, jamais "chez le
@@ -109,27 +118,39 @@ CONTEXTE INDISPENSABLE
   SIREN 830 852 976
 - Téléphone retiré partout (seul l'email contact@newp.fr est public)
 - Section pigeon voyageur dans contact.html à conserver (pastiche signature)
+- Formulaires contributeur : 18 sujets cochables (6 rubriques × 3 sous-thèmes)
+  + champ libre "Autre sujet", validation JS ≥1 case cochée
 
 WORKFLOW DE PUBLICATION
 Pour publier un nouvel article :
 1. Créer article-[slug].html dans
    C:\Users\sebas\Downloads\Claude\journal-investisseurs\
-2. Vérifier meta title/description spécifiques
+2. Vérifier meta title/description + canonical + OG spécifiques
 3. Ajouter dans la rubrique correspondante (rubrique-[rubrique].html)
+   + section "Toutes nos publications" de index.html si majeur
 4. Ajouter ligne dans sitemap.xml
 5. cd "C:\Users\sebas\Downloads\Claude\journal-investisseurs" &&
    git add . && git commit -m "Article : [titre]" && git push
 6. GitHub Pages publie en < 2 min
+7. (Bonus) curl IndexNow pour push instantané vers Bing/Yandex
+   (clé à configurer cf. GUIDE_INDEXATION.md §2.3)
+
+WORKFLOW DE VALIDATION VISUELLE
+Après chaque édition ou création de page :
+1. Ouvrir le fichier local dans le navigateur via
+   PowerShell : Start-Process "C:\Users\sebas\Downloads\Claude\journal-investisseurs\[fichier].html"
+2. Après push, ouvrir l'URL live pour vérification finale
 
 MÉMOIRE LONGUE
 Lire en mémoire :
 - project_journal_investisseurs.md (état complet du projet)
 - Workflow validation HTML Verte (ouvrir systématiquement les pages produites
-  dans le navigateur via PowerShell Start-Process)
+  dans le navigateur via PowerShell Start-Process — appliqué au JDI aussi)
 
 Démarre par : (1) vérifier que HTTPS est actif et activer l'enforce HTTPS
-si oui ; (2) curl rapide sur la home, un article, et le sitemap pour
-confirmer que tout répond bien ; (3) attendre les instructions de Sébastien.
+si oui ; (2) curl rapide sur la home, un article, le sitemap et
+devenir-contributeur pour confirmer que tout répond bien ; (3) attendre
+les instructions de Sébastien.
 ```
 
 ---
@@ -142,6 +163,18 @@ confirmer que tout répond bien ; (3) attendre les instructions de Sébastien.
 
 ## Pourquoi un prompt de transition ?
 
-- Une conversation Claude finit par accumuler beaucoup de contexte (cette session a produit ~40 000 mots de contenu + dizaines d'éditions)
+- Une conversation Claude finit par accumuler beaucoup de contexte (cette session a produit ~50 000 mots de contenu + dizaines d'éditions + 110 fichiers HTML)
 - Repartir d'un prompt structuré garantit que le nouveau Claude a accès au strict nécessaire sans surcharge
 - La memory `project_journal_investisseurs.md` persiste entre conversations donc le détail complet est disponible si besoin
+
+## Historique récent des commits majeurs
+
+| Commit | Message | Date |
+|---|---|---|
+| `ceab104` | docs: guide indexation Search Console + Bing Webmaster + IndexNow | 30 mai |
+| `bc85a87` | fix(footer): ajout lien 'Intégrer la rédaction' sur 13 pages | 30 mai |
+| `23d3916` | feat(contrib): sujets de prédilection en cases à cocher | 30 mai |
+| `7bdf248` | feat: page devenir-contributeur + article-invite + footer link | 30 mai |
+| `075781b` | feat: 72 sous-rubriques distinctes + nav globale + home magazine | 29 mai |
+
+·
