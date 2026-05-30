@@ -1,5 +1,5 @@
 # Le Journal des Investisseurs — robots.txt
-# https://journal-des-investisseurs.fr
+# http://journal-des-investisseurs.fr
 
 User-agent: *
 Allow: /
@@ -17,4 +17,4 @@ Disallow: /404.html
 Disallow: /merci.html
 
 # Sitemap
-Sitemap: https://journal-des-investisseurs.fr/sitemap.xml
+Sitemap: http://journal-des-investisseurs.fr/sitemap.xml

@@ -3,7 +3,7 @@
 
   <!-- HOME -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/</loc>
+    <loc>http://journal-des-investisseurs.fr/</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,37 +11,37 @@
 
   <!-- PAGES RUBRIQUE -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-bourse.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-bourse.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-immobilier.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-immobilier.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-metaux.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-metaux.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-crypto.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-crypto.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-patrimoine.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-patrimoine.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/rubrique-strategie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/rubrique-strategie.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -49,25 +49,25 @@
 
   <!-- ARTICLES MÉTAUX PRÉCIEUX (Bertrand Mathieu) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-lingot-or-kilogramme.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-lingot-or-kilogramme.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-piece-or-napoleon.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-piece-or-napoleon.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-argent-metal.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-argent-metal.html</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-platine-palladium.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-platine-palladium.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -75,37 +75,37 @@
 
   <!-- ARTICLES PATRIMOINE + IMMOBILIER (Sébastien Joumel) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-assurance-vie-pieges.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-assurance-vie-pieges.html</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-scpi-guide-complet.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-scpi-guide-complet.html</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-per-vs-assurance-vie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-per-vs-assurance-vie.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-lmnp-fin-avantage.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-lmnp-fin-avantage.html</loc>
     <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-scpi-europeennes-palmares.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-scpi-europeennes-palmares.html</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-demembrement-assurance-vie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-demembrement-assurance-vie.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -113,13 +113,13 @@
 
   <!-- ARTICLES STRATÉGIE (Sébastien Joumel) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-allocation-tiers.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-allocation-tiers.html</loc>
     <lastmod>2026-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-inflation-persistante.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-inflation-persistante.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -127,37 +127,37 @@
 
   <!-- ARTICLES BOURSE + CRYPTO (Kévin Papot) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-bitcoin-signal-achat.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-bitcoin-signal-achat.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-etf-dividendes.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-etf-dividendes.html</loc>
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-ethereum-pectra.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-ethereum-pectra.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-small-caps-francaises.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-small-caps-francaises.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-pea-plafond-300k.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-pea-plafond-300k.html</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-stablecoins-mica.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-stablecoins-mica.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -165,7 +165,7 @@
 
   <!-- RECENSION DOCUMENTAIRE (Kévin Papot) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-papier-monnaie-arte.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-papier-monnaie-arte.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -173,7 +173,7 @@
 
   <!-- ARCHIVES -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/archives.html</loc>
+    <loc>http://journal-des-investisseurs.fr/archives.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -181,13 +181,13 @@
 
   <!-- RECRUTEMENT ÉDITORIAL -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/devenir-contributeur.html</loc>
+    <loc>http://journal-des-investisseurs.fr/devenir-contributeur.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/article-invite.html</loc>
+    <loc>http://journal-des-investisseurs.fr/article-invite.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -195,19 +195,19 @@
 
   <!-- PAGES INSTITUTIONNELLES -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/a-propos.html</loc>
+    <loc>http://journal-des-investisseurs.fr/a-propos.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/annoncer.html</loc>
+    <loc>http://journal-des-investisseurs.fr/annoncer.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/contact.html</loc>
+    <loc>http://journal-des-investisseurs.fr/contact.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -215,7 +215,7 @@
 
   <!-- LÉGAL -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/mentions-legales.html</loc>
+    <loc>http://journal-des-investisseurs.fr/mentions-legales.html</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -224,433 +224,433 @@
 
   <!-- SOUS-RUBRIQUES (72) -->
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-cac-40.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-cac-40.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-indices-mondiaux.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-indices-mondiaux.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-ipo.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-ipo.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-small-mid-caps.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-small-mid-caps.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-actions-dividendes.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-actions-dividendes.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-etf-trackers.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-etf-trackers.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-pea-compte-titres.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-pea-compte-titres.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-obligations.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-obligations.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-analyse-technique.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-analyse-technique.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-analyse-fondamentale.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-analyse-fondamentale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-strategies-value.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-strategies-value.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-bourse-courtiers-en-ligne.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-bourse-courtiers-en-ligne.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-residentiel-ancien.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-residentiel-ancien.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-residentiel-neuf.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-residentiel-neuf.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-prestige.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-prestige.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-marches-etrangers.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-marches-etrangers.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-locatif-lmnp.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-locatif-lmnp.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-scpi-opci.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-scpi-opci.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-crowdfunding.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-crowdfunding.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-viager-demembrement.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-viager-demembrement.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-pinel-denormandie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-pinel-denormandie.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-loi-malraux.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-loi-malraux.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-deficit-foncier.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-deficit-foncier.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-immobilier-courtiers-credit.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-immobilier-courtiers-credit.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-lingots-or.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-lingots-or.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-pieces-or.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-pieces-or.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-or-papier-etf.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-or-papier-etf.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-cours-cotations.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-cours-cotations.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-argent.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-argent.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-platine-palladium.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-platine-palladium.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-industriels.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-industriels.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-terres-rares.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-terres-rares.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-comptoirs-negociants.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-comptoirs-negociants.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-stockage-securise.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-stockage-securise.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-fiscalite-metal.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-fiscalite-metal.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-metaux-authentification.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-metaux-authentification.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-bitcoin.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-bitcoin.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-ethereum.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-ethereum.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-altcoins-majeurs.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-altcoins-majeurs.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-stablecoins.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-stablecoins.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-defi-staking.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-defi-staking.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-nft-tokenisation.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-nft-tokenisation.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-web3-blockchain.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-web3-blockchain.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-minage.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-minage.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-plateformes-echange.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-plateformes-echange.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-wallets-cold-storage.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-wallets-cold-storage.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-fiscalite.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-fiscalite.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-crypto-regulation-mica.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-crypto-regulation-mica.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-assurance-vie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-assurance-vie.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-per.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-per.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-epargne-salariale.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-epargne-salariale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-livrets-reglementes.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-livrets-reglementes.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-succession.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-succession.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-donation.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-donation.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-demembrement.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-demembrement.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-holding-familiale.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-holding-familiale.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-art-collection.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-art-collection.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-vin-investissement.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-vin-investissement.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-forets-gfi.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-forets-gfi.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-patrimoine-montres-horlogerie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-patrimoine-montres-horlogerie.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-allocation-actifs.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-allocation-actifs.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-profils-investisseurs.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-profils-investisseurs.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-diversification.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-diversification.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-gestion-risque.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-gestion-risque.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-macroeconomie.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-macroeconomie.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-geopolitique.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-geopolitique.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-banques-centrales.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-banques-centrales.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-cycles-crises.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-cycles-crises.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-edito-jour.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-edito-jour.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-avis-banquier.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-avis-banquier.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-lettre-confidentielle.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-lettre-confidentielle.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://journal-des-investisseurs.fr/sous-rubrique-strategie-carnet-redaction.html</loc>
+    <loc>http://journal-des-investisseurs.fr/sous-rubrique-strategie-carnet-redaction.html</loc>
     <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
