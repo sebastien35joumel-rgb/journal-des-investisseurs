@@ -13,5 +13,8 @@ Disallow: /sous-rubrique.html
 # Page d'erreur
 Disallow: /404.html
 
+# Page de remerciement post-formulaire (transactionnelle, noindex)
+Disallow: /merci.html
+
 # Sitemap
 Sitemap: https://journal-des-investisseurs.fr/sitemap.xml

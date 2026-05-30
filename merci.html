@@ -3,26 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Le Journal des Investisseurs</title>
-<meta name="description" content="Écrire à la rédaction du Journal des Investisseurs. Remarques, suggestions, droits de réponse, propositions de tribune.">
+<title>Message reçu — Le Journal des Investisseurs</title>
+<meta name="description" content="Votre message a bien été transmis à la rédaction du Journal des Investisseurs.">
+<meta name="robots" content="noindex,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.svg">
-<meta property="og:site_name" content="Le Journal des Investisseurs">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://journal-des-investisseurs.fr/contact.html">
-<meta property="og:title" content="Contact">
-<meta property="og:description" content="Écrire à la rédaction du Journal des Investisseurs. Remarques, suggestions, droits de réponse, propositions de tribune.">
-<meta property="og:image" content="https://journal-des-investisseurs.fr/og-image.svg">
-<meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact">
-<meta name="twitter:description" content="Écrire à la rédaction du Journal des Investisseurs. Remarques, suggestions, droits de réponse, propositions de tribune.">
-<meta name="twitter:image" content="https://journal-des-investisseurs.fr/og-image.svg">
-<link rel="canonical" href="https://journal-des-investisseurs.fr/contact.html">
+<link rel="canonical" href="https://journal-des-investisseurs.fr/merci.html">
+<style>
+.thanks-card{
+  border:2px double #141414;
+  background:rgba(241,232,208,0.55);
+  padding:42px 38px 36px;
+  margin:30px auto 40px;
+  max-width:760px;
+  text-align:center;
+  position:relative;
+}
+.thanks-card::before,.thanks-card::after{
+  content:"";
+  position:absolute;
+  left:8px;right:8px;
+  border-top:1px solid #141414;
+  height:0;
+}
+.thanks-card::before{top:8px}
+.thanks-card::after{bottom:8px}
+.thanks-seal{
+  font-family:"IM Fell English SC",serif;
+  font-size:11px;
+  letter-spacing:.25em;
+  color:#5A4A35;
+  margin-bottom:6px;
+}
+.thanks-title{
+  font-family:"IM Fell English",serif;
+  font-size:42px;
+  line-height:1.1;
+  margin:6px 0 8px;
+  color:#141414;
+}
+.thanks-title em{font-style:italic;color:#5A4A35}
+.thanks-sub{
+  font-family:"Old Standard TT",serif;
+  font-style:italic;
+  font-size:16px;
+  color:#5A4A35;
+  margin:0 auto 18px;
+  max-width:540px;
+}
+.thanks-body{
+  font-family:"Old Standard TT",serif;
+  font-size:16px;
+  line-height:1.7;
+  text-align:left;
+  color:#141414;
+  margin:18px auto 22px;
+  max-width:580px;
+}
+.thanks-body p{margin:0 0 12px}
+.thanks-ornament{
+  font-family:"IM Fell English",serif;
+  color:#5A4A35;
+  font-size:18px;
+  letter-spacing:.3em;
+  margin:18px 0 14px;
+}
+.thanks-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+  margin-top:18px;
+}
+.thanks-cta a{
+  font-family:"IM Fell English SC",serif;
+  font-size:12px;
+  letter-spacing:.22em;
+  color:#141414;
+  text-decoration:none;
+  border:1px solid #141414;
+  padding:10px 18px 9px;
+  background:transparent;
+  transition:background .15s ease,color .15s ease;
+}
+.thanks-cta a:hover{background:#141414;color:#F1E8D0}
+.thanks-cta a.primary{background:#141414;color:#F1E8D0}
+.thanks-cta a.primary:hover{background:#5A4A35;border-color:#5A4A35}
+@media (max-width:560px){
+  .thanks-card{padding:30px 22px}
+  .thanks-title{font-size:32px}
+  .thanks-sub{font-size:15px}
+  .thanks-cta{flex-direction:column;align-items:stretch}
+  .thanks-cta a{text-align:center}
+}
+</style>
 </head>
 <body>
 
@@ -85,107 +163,29 @@
 
   <div class="breadcrumb">
     <a href="index.html">Accueil</a><span class="sep">›</span>
-    <span>Contact</span>
+    <span>Message reçu</span>
   </div>
-
-  <header class="page-header">
-    <div class="kicker">Écrire à la rédaction</div>
-    <h1>Contact</h1>
-    <p class="subtitle">Remarques, suggestions, droits de réponse, propositions de tribune ou simples mots de lecteur : nous lisons chaque courrier, dans l'ordre de leur réception.</p>
-  </header>
 
   <div class="static-page">
 
-    <section>
-      <h2>Formulaire de contact</h2>
-      <p style="text-align:center;font-style:italic;color:#5A4A35;margin-bottom:18px">Votre message sera transmis directement à <em>contact@newp.fr</em>. La rédaction vous répondra par courrier électronique.</p>
-      <form class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
-        <input type="hidden" name="_subject" value="Nouveau message — Le Journal des Investisseurs">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://journal-des-investisseurs.fr/merci.html?from=contact">
-        <input type="text" name="_honey" style="display:none">
-        <h3>Écrire à la rédaction</h3>
+    <div class="thanks-card">
+      <div class="thanks-seal">— Accusé de réception —</div>
+      <h1 class="thanks-title">Votre courrier <em>est arrivé</em> à bon port.</h1>
+      <p class="thanks-sub" id="thanksSub">La rédaction du Journal des Investisseurs vous remercie de votre envoi.</p>
 
-        <div class="field">
-          <label for="nom">Vos nom et prénom</label>
-          <input type="text" id="nom" name="nom" required>
-        </div>
+      <div class="thanks-body" id="thanksBody">
+        <p>Votre message a été déposé sur le bureau de la rédaction. Nous lisons chaque courrier dans l'ordre de sa réception et vous répondrons par courrier électronique, en règle générale sous <strong>trois à cinq jours ouvrés</strong>.</p>
+        <p>En attendant, profitez de votre passage pour parcourir nos colonnes : nos chroniqueurs ont rédigé ces derniers jours quelques pièces dont la lecture mérite le détour.</p>
+      </div>
 
-        <div class="field">
-          <label for="email">Adresse de courrier électronique</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+      <div class="thanks-ornament">· · · · ·</div>
 
-        <div class="field">
-          <label for="objet">Objet de votre message</label>
-          <select id="objet" name="objet" required>
-            <option value="">— Choisir un motif —</option>
-            <option>Remarque sur un article</option>
-            <option>Proposition de tribune</option>
-            <option>Demande de droit de réponse</option>
-            <option>Signalement d'une coquille</option>
-            <option>Question sur l'abonnement</option>
-            <option>Demande presse</option>
-            <option>Autre sujet</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="article">Référence de l'article concerné <em style="font-family:'IM Fell English',serif;color:#5A4A35;letter-spacing:0">(facultatif)</em></label>
-          <input type="text" id="article" name="article" placeholder="Titre ou date de parution">
-        </div>
-
-        <div class="field">
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-
-        <button type="submit">Faire parvenir à la rédaction</button>
-      </form>
-    </section>
-
-    <section>
-      <h2>Par pigeon voyageur</h2>
-      <p>Fidèle à la tradition inaugurée par Julius Reuter, qui établit en l'an 1850 entre Bruxelles et Aix-la-Chapelle la première ligne d'information financière par pigeon voyageur, <em>Le Journal des Investisseurs</em> maintient en activité son colombier de réception. Les lecteurs établis hors de portée des moyens électroniques modernes — ou simplement attachés aux usages éprouvés du siècle passé — peuvent ainsi adresser leurs correspondances à la rédaction par voie ailée.</p>
-
-      <p style="text-align:center;font-family:'IM Fell English SC',serif;font-size:17px;letter-spacing:.06em;line-height:1.7;margin:24px 0">
-        — Colombier de la rédaction —<br>
-        <span style="font-size:20px">4 Route du Sept Un</span><br>
-        <span style="font-size:20px">16100 Boutiers-Saint-Trojan</span><br>
-        <em style="font-family:'IM Fell English',serif;font-style:italic;letter-spacing:0;color:#5A4A35;font-size:13px">— Coordonnées géodésiques : 45°41′34″N · 0°15′12″W —</em>
-      </p>
-
-      <h3 style="font-family:'IM Fell English SC',serif;font-weight:400;font-size:18px;letter-spacing:.1em;text-align:center;margin:24px 0 10px;color:#5A4A35">Recommandations pratiques à l'expéditeur</h3>
-
-      <ul>
-        <li><strong>Affranchissement</strong> — un quart de boisseau de millet ou de blé tendre, attaché en bandoulière à l'animal, suffit à la rétribution coutumière du colombier.</li>
-        <li><strong>Format du message</strong> — papier de soie roulé, n'excédant point trois grammes, glissé dans un tube de bambou ou de plume creuse. Encre sépia recommandée pour la longévité de l'écrit.</li>
-        <li><strong>Distance utile</strong> — ne pas dépasser huit cents kilomètres en ligne directe depuis le point de lâcher. Au-delà, l'acheminement devient incertain.</li>
-        <li><strong>Délais indicatifs</strong> — trois jours pour la zone Charente, cinq à sept pour les départements limitrophes, jusqu'à dix jours pour les correspondances ultramarines. Le vent dominant et l'état du ciel peuvent prolonger ces durées.</li>
-        <li><strong>Période défavorable</strong> — éviter les lâchers entre le 15 octobre et le 15 mars, période de moindre disponibilité des animaux et d'aléas météorologiques accrus.</li>
-      </ul>
-
-      <p style="font-style:italic;color:#5A4A35;font-size:14px;margin-top:18px;padding:12px 16px;border-top:1px dotted #141414;border-bottom:1px dotted #141414;text-align:center">La rédaction décline toute responsabilité en cas d'interception par rapace, d'égarement consécutif à une intempérie majeure, ou de détournement de l'animal à des fins gastronomiques par un tiers mal intentionné. Aucune correspondance perdue ne saurait engager la responsabilité du <em>Journal des Investisseurs</em>.</p>
-
-      <p>Pour les sujets ne souffrant aucun délai — communiqués de presse, droits de réponse urgents, sollicitations d'annonceurs — nous recommandons néanmoins l'usage du formulaire électronique ci-dessus, lequel parvient à la rédaction dans l'instant et sans risque cynégétique.</p>
-    </section>
-
-    <section>
-      <h2>Annonceurs et partenaires</h2>
-      <p>Les demandes de partenariat éditorial, d'encart publicitaire ou de dossier sur-mesure sont traitées par notre régie partenaires. Avant d'engager la discussion, nous vous invitons à consulter notre <a href="annoncer.html">page dédiée</a> qui détaille nos formats, tarifs et charte d'engagement.</p>
-    </section>
-
-    <section>
-      <h2>Délais de réponse</h2>
-      <ul>
-        <li><strong>Message électronique</strong> — réponse sous trois jours ouvrables.</li>
-        <li><strong>Droit de réponse</strong> — accusé de réception sous vingt-quatre heures, publication dans l'édition suivante si recevable.</li>
-        <li><strong>Demande presse</strong> — traitement prioritaire, réponse dans la journée pour les sollicitations urgentes.</li>
-        <li><strong>Régie partenaires</strong> — premier contact par courrier électronique sous quarante-huit heures après réception du formulaire.</li>
-        <li><strong>Pigeon voyageur</strong> — comptez trois à dix jours selon la distance et l'état du ciel. Une réponse de notre part empruntera le même canal, dans le respect des usages.</li>
-      </ul>
-    </section>
+      <div class="thanks-cta">
+        <a href="index.html" class="primary">Revenir à la une</a>
+        <a href="archives.html">Consulter les archives</a>
+        <a href="a-propos.html">La Rédaction</a>
+      </div>
+    </div>
 
   </div>
 
@@ -209,6 +209,37 @@
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var p=new URLSearchParams(window.location.search);
+  var from=p.get('from');
+  var sub=document.getElementById('thanksSub');
+  var body=document.getElementById('thanksBody');
+  if(!sub||!body) return;
+
+  if(from==='contact'){
+    sub.innerHTML='Votre message a bien été transmis à la rédaction du <em>Journal des Investisseurs</em>.';
+    body.innerHTML=
+      '<p>Votre courrier a été déposé sur le bureau de la rédaction. Nous lisons chaque message dans l’ordre de sa réception et vous répondrons par courrier électronique, en règle générale sous <strong>trois à cinq jours ouvrés</strong>.</p>'+
+      '<p>En attendant, profitez de votre passage pour parcourir nos colonnes.</p>';
+  } else if(from==='contributeur'){
+    sub.innerHTML='Votre candidature pour rejoindre nos colonnes a bien été transmise au Rédacteur en chef.';
+    body.innerHTML=
+      '<p>Votre dossier sera étudié dans la quinzaine. Si votre profil correspond à nos lignes éditoriales et que nos calendriers concordent, <strong>Kévin Papot</strong> ou <strong>Sébastien Joumel</strong> vous contactera personnellement par courrier électronique pour vous transmettre la charte de la rédaction et discuter de vos premières contributions.</p>'+
+      '<p>Toutes les candidatures reçoivent une réponse, qu’elle soit positive ou négative.</p>';
+  } else if(from==='article-invite'){
+    sub.innerHTML='Votre proposition de tribune a bien été transmise à la rédaction.';
+    body.innerHTML=
+      '<p>Votre pitch sera lu et soumis au comité éditorial. Si le sujet rejoint nos lignes, nous reviendrons vers vous par courrier électronique sous <strong>quinze jours</strong> avec nos retours sur l’angle, le format et le calendrier de parution.</p>'+
+      '<p>Les propositions retenues font l’objet d’un travail éditorial conjoint avant publication.</p>';
+  } else if(from==='annoncer'){
+    sub.innerHTML='Votre demande de partenariat a bien été transmise à la régie du journal.';
+    body.innerHTML=
+      '<p>Un membre de la régie vous contactera par courrier électronique sous <strong>quarante-huit heures ouvrées</strong> pour discuter de votre dossier, du format de présence retenu et des modalités pratiques.</p>';
+  }
+})();
+</script>
 
 </body>
 </html>
