@@ -31,6 +31,15 @@
   .form-vintage .field-group{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
   .form-vintage .field-group .field{margin-bottom:0}
   .form-vintage .field-help{font-family:"IM Fell English",serif;font-style:italic;font-size:12px;color:#5A4A35;margin-top:3px;display:block}
+  /* Champ URL invalide (rempli mais format incorrect) : rouge sépia, fond légèrement rosé */
+  .form-vintage input[type=url]:invalid:not(:placeholder-shown){
+    border-color:#6b1a1a;
+    background:#fff5f5;
+    box-shadow:inset 0 0 0 1px #6b1a1a;
+  }
+  .form-vintage input[type=url]:valid{
+    border-color:#141414;
+  }
   .legal-block{
     border:2px solid #141414;background:#F1E8D0;padding:16px 20px;margin:20px 0;
     font-family:"Old Standard TT",serif;font-size:13.5px;line-height:1.55;
@@ -98,7 +107,7 @@
     <section>
       <h2>Proposer un article</h2>
 
-      <form class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
+      <form id="inviteForm" class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
         <input type="hidden" name="_subject" value="Proposition d'article invité — Le Journal des Investisseurs">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
@@ -173,7 +182,7 @@
 
         <div class="field">
           <label for="portrait">URL de votre portrait <em style="font-style:italic;color:#5A4A35;font-weight:400">(facultatif)</em></label>
-          <input type="text" id="portrait" name="URL portrait" placeholder="https://drive.google.com/...  —  ou laissez vide">
+          <input type="url" id="portrait" name="URL portrait" placeholder="https://drive.google.com/...  —  ou laissez vide">
           <span class="field-help"><strong>Si vous n'avez pas de lien&nbsp;: laissez ce champ vide</strong>, nous vous solliciterons par courriel après acceptation. Sinon&nbsp;: lien vers une photo hébergée (Google Drive, Dropbox, iCloud, OneDrive, page LinkedIn, etc.). Recommandé : portrait sobre, cadrage serré, fond neutre, résolution minimale 500&nbsp;×&nbsp;500 pixels.</span>
         </div>
 
@@ -234,5 +243,28 @@
     <div class="ornament" style="margin-top:10px">· · · · ·</div>
   </footer>
 </div>
+<script>
+(function(){
+  // Validation URL custom : message clair et bilingue à l'utilisateur
+  function setupUrlValidation(id){
+    var el=document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('input',function(){ el.setCustomValidity(''); });
+    el.addEventListener('invalid',function(){
+      if(el.value.trim()===''){
+        el.setCustomValidity('');
+      } else if(el.validity.typeMismatch){
+        el.setCustomValidity(
+          'Ce champ attend une URL valide commençant par http:// ou https:// '+
+          '(exemple : https://drive.google.com/...).\n\n'+
+          'Si vous n’avez pas de lien à transmettre, laissez ce champ vide : '+
+          'nous vous solliciterons par courriel après acceptation.'
+        );
+      }
+    });
+  }
+  ['portrait','site','linkedin'].forEach(setupUrlValidation);
+})();
+</script>
 </body>
 </html>
