@@ -10,7 +10,7 @@ d'analyse financière édité par NEWP SAS, signé Sébastien Joumel (Directeur 
 publication), Kévin Papot (Rédacteur en chef), Bertrand Mathieu (Chroniqueur
 métaux précieux, fondateur de Maison Or et Bijoux).
 
-État au 30 mai 2026 — fin de session (commit 6f0737d) :
+État au 31 mai 2026 — fin de session (commit 4036d27) :
 
 SITE EN PROD
 - URL : http://journal-des-investisseurs.fr/ (HTTPS toujours en attente
@@ -21,22 +21,28 @@ SITE EN PROD
 - gh CLI authentifié sebastien35joumel-rgb (via keyring)
 - Coût annuel : ~10 € (NDD Hostinger seul)
 
-CONTENU EN PROD (au commit 6f0737d)
-- 111 fichiers HTML (108 publics + 404 + _templates + merci.html noindex)
-- sitemap.xml = 105 URLs publiques en HTTP (déclaration adaptée à la
+CONTENU EN PROD (au commit 4036d27)
+- 112 fichiers HTML (109 publics + 404 + _templates + merci.html noindex)
+- sitemap.xml = 106 URLs publiques en HTTP (déclaration adaptée à la
   propriété GSC qui est en http://, à rebasculer en https:// au switch)
-- 19 articles maîtres signés Bertrand/Sébastien/Kévin
+- 20 articles maîtres signés Bertrand/Sébastien/Kévin
+  (le dernier en date du 31 mai : recension Arte 'Inflation, la grande
+  peur' MONEY/Mordillat-Clerc, signé Sébastien, 3930 mots, format
+  signature avec citations vérifiées d'André Orléan en blockquotes)
 - 6 rubriques + 72 sous-rubriques distinctes (SEO longue traîne)
 - archives.html, index.html (home magazine)
 - Pages institutionnelles : a-propos, annoncer, contact, mentions-legales
-- Pages rédaction : devenir-contributeur + article-invite (formulaires
-  contributeur réguliers/occasionnels, sujets en cases à cocher groupées,
-  validation URL stricte avec message custom, droit à l'image, illustrations
-  libres de droits/sourcées)
+- Pages rédaction : devenir-contributeur + article-invite avec garde-fous
+  URSSAF de niveau STRICT (cf. infra) : déclaration d'intérêt non
+  contractuelle, absence de subordination, bascule freelance prévue,
+  sujets en cases à cocher groupées, validation URL stricte avec message
+  custom, droit à l'image, illustrations libres de droits/sourcées
 - merci.html (thank-you post-formulaire, noindex, message contextualisé en JS
   selon ?from=contact/contributeur/article-invite/annoncer)
 - Form action vers https://formsubmit.co/contact@newp.fr (mode email-clair,
   À MIGRER en mode token cf. tâche #30 + section ci-dessous)
+- TOUS les articles ont leur Schema.org NewsArticle JSON-LD (auto-script
+  /tmp/jdi-schema/generate.mjs idempotent, réutilisable pour futurs articles)
 
 PACK FAVICONS (nouveau cette session)
 - favicon.ico multi-taille (16+32+48) — pour GSC + Google Search + Bing
@@ -124,6 +130,34 @@ PROCHAINS CHANTIERS POSSIBLES (à demander à Sébastien)
   courtiers crédit, plateformes crypto agréées)
 - Page profile auteur individuel par rédacteur
 
+RÈGLES STRICTES POSÉES PAR SÉBASTIEN
+- AUCUN tool payant sans validation explicite préalable via AskUserQuestion.
+  Même 0,005 $ = interdit sans OUI explicite. Vaut pour Apify (actors payants),
+  tout MCP avec pricing, toute action qui pourrait consommer un crédit. Si
+  un coût même minime est affiché, demander d'abord, agir ensuite seulement
+  si OUI explicite. (Règle posée le 31 mai 2026 suite à appel d'un Apify
+  actor sans validation — environ 0,005 $.)
+- Pour récupérer une transcription YouTube : utiliser yt-dlp en local
+  (gratuit) ou demander à Sébastien si l'option payante est acceptable.
+
+GARDE-FOUS URSSAF (devenir-contributeur + article-invite)
+- Pages refondues pour positionner clairement la démarche comme
+  'déclaration d'intérêt à l'initiative du contributeur', PAS comme
+  candidature à un poste ni demande de prestation
+- Encart 'Nature de la démarche' en haut du formulaire principal
+- Champ Fréquence/Cadence reformulé : retiré 'Mensuel/Hebdomadaire' qui
+  créaient obligation, remplacé par '1 article / 1-2/an / 3-6/an /
+  au-delà = freelance recommandé'
+- 3 nouvelles clauses juridiques sur devenir-contributeur (§0 absence
+  subordination, §9 non-salariat non-prestation rappelant L1221-1 Code
+  travail + Code civil, §10 bascule freelance) et 2 sur article-invite
+  (§0 nature, §7 non-salariat)
+- Cases obligatoires enrichies avec mention 'à ma seule initiative,
+  sans subordination, sans calendrier imposé'
+- Vocabulaire neutralisé : 'candidature' → 'déclaration d'intérêt',
+  'Intégrer la rédaction' (titre H1) → 'Proposer des contributions au
+  Journal', 'Format attendu' → 'Format souhaité'
+
 CONTEXTE INDISPENSABLE
 - Voix narrative : "nous" (Sébastien + Kévin), vouvoiement, jamais "chez le
   JDI on..."
@@ -186,6 +220,10 @@ home + sitemap pour vérifier que tout répond ; (3) attendre les instructions.
 
 | Commit | Message | Date |
 |---|---|---|
+| `4036d27` | feat(article): enrichissement Arte 'Inflation, la grande peur' (3930 mots, citations Orléan) | 31 mai |
+| `91e5337` | feat(article): recension Arte 'Inflation, la grande peur' v1 (2100 mots) | 31 mai |
+| `60390e3` | feat(seo): Schema.org NewsArticle JSON-LD sur les 19 articles | 31 mai |
+| `f316452` | feat(legal): garde-fous URSSAF sur devenir-contributeur (strict) | 31 mai |
 | `6f0737d` | feat(forms): validation URL stricte + message custom clair | 30 mai |
 | `457c393` | ux(forms): clarifier 'laisser vide si pas de lien' | 30 mai |
 | `b04a37a` | fix(forms): champs Portrait + Échantillon en type=text | 30 mai |
