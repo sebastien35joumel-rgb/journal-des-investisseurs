@@ -25,12 +25,15 @@ html,body{
   line-height:1.5;
 }
 
+html{overflow-x:hidden;max-width:100vw}
 body{
   background-image:
     radial-gradient(circle at 20% 30%, var(--stain) 0, transparent 40%),
     radial-gradient(circle at 80% 70%, var(--stain) 0, transparent 35%),
     radial-gradient(circle at 50% 90%, rgba(90,74,53,.05) 0, transparent 45%);
   min-height:100vh;
+  overflow-x:hidden;
+  max-width:100vw;
   padding:0 0 60px;
 }
 
@@ -148,8 +151,11 @@ nav.rubriques{
   font-size:14px;
   letter-spacing:.12em;
   flex-wrap:wrap;
-  position:relative;
-  z-index:10;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--paper);
+  box-shadow:0 2px 0 rgba(20,20,20,0.04);
 }
 nav.rubriques .rub{position:relative}
 nav.rubriques .rub > a{
@@ -1434,6 +1440,41 @@ footer.site-footer .footer-nav a:hover{font-style:italic}
   .archives-list h3{font-size:16px}
   .archives-list .archive-excerpt{font-size:13.5px}
   .archives-list .archive-meta{font-size:11.5px}
+}
+
+/* Anti-débordement horizontal global : aucun élément ne déborde du viewport mobile */
+*,*::before,*::after{max-width:100%;box-sizing:border-box}
+img,svg,video,iframe,table,pre{max-width:100%;height:auto}
+table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.sheet{overflow-x:hidden;width:100%}
+
+/* Nav rubriques : sticky DESKTOP UNIQUEMENT (en mobile elle est déjà empilée verticalement, sticky encombrerait) */
+@media (max-width:960px){
+  nav.rubriques{
+    position:static !important;
+    top:auto !important;
+    box-shadow:none !important;
+  }
+}
+
+/* Blindage du footer : toujours visible et accessible, même sur mobile très étroit */
+footer.site-footer{
+  display:block;
+  width:100%;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+footer.site-footer .footer-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:4px 10px;
+  align-items:center;
+}
+@media (max-width:560px){
+  footer.site-footer{padding-bottom:env(safe-area-inset-bottom,8px)}
+  footer.site-footer .footer-nav{font-size:11px;letter-spacing:.08em;line-height:1.9}
+  footer.site-footer .footer-nav a{margin:0 2px}
 }
 
 /* Fix responsive topbar : empêche overflow horizontal en mobile très étroit */
