@@ -25,14 +25,14 @@ html,body{
   line-height:1.5;
 }
 
-html{overflow-x:hidden;max-width:100vw}
+/* NB: aucun overflow:hidden ici — casserait position:sticky de nav.rubriques */
+html{max-width:100vw}
 body{
   background-image:
     radial-gradient(circle at 20% 30%, var(--stain) 0, transparent 40%),
     radial-gradient(circle at 80% 70%, var(--stain) 0, transparent 35%),
     radial-gradient(circle at 50% 90%, rgba(90,74,53,.05) 0, transparent 45%);
   min-height:100vh;
-  overflow-x:hidden;
   max-width:100vw;
   padding:0 0 60px;
 }
@@ -1442,11 +1442,13 @@ footer.site-footer .footer-nav a:hover{font-style:italic}
   .archives-list .archive-meta{font-size:11.5px}
 }
 
-/* Anti-débordement horizontal global : aucun élément ne déborde du viewport mobile */
+/* Anti-débordement horizontal global :
+   pas d'overflow:hidden sur les ancêtres (casserait nav.rubriques en sticky).
+   On contraint chaque enfant à respecter le viewport. */
 *,*::before,*::after{max-width:100%;box-sizing:border-box}
 img,svg,video,iframe,table,pre{max-width:100%;height:auto}
 table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.sheet{overflow-x:hidden;width:100%}
+.sheet{width:100%;box-sizing:border-box}
 
 /* Nav rubriques : sticky DESKTOP UNIQUEMENT (en mobile elle est déjà empilée verticalement, sticky encombrerait) */
 @media (max-width:960px){
