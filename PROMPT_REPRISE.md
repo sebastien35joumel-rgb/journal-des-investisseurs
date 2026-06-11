@@ -10,7 +10,7 @@ d'analyse financière édité par NEWP SAS, signé Sébastien Joumel (Directeur 
 publication), Kévin Papot (Rédacteur en chef), Bertrand Mathieu (Chroniqueur
 métaux précieux, fondateur de Maison Or et Bijoux).
 
-État au 11 juin 2026 — fin de session (commit 1fec2e6) :
+État au 11 juin 2026 — après chantiers E-E-A-T (commit 331d163) :
 
 SITE EN PROD — HTTPS ACTIF ✅
 - URL : https://journal-des-investisseurs.fr/ (cert Let's Encrypt émis le
@@ -22,7 +22,20 @@ SITE EN PROD — HTTPS ACTIF ✅
 - gh CLI authentifié sebastien35joumel-rgb
 - TOUT le code est en https:// (sitemap, robots, schema.org, og, 23 articles)
 
-CONTENU EN PROD (113 fichiers HTML)
+CONTENU EN PROD (117 fichiers HTML)
+- NOUVEAU 11 juin (commit 331d163) — chantiers E-E-A-T livrés :
+  * 3 pages auteur : a-propos-sebastien/kevin/bertrand.html (sceau SVG,
+    schema ProfilePage+Person, liste complète des signatures SJ 10/KP 8/BM 5,
+    conflit d'intérêt déclaré pour Bertrand, 3 liens MOB dofollow) ;
+    maillées depuis a-propos.html (cartes), les signatures des 23 articles
+    (nom cliquable) et l'author.url des schemas NewsArticle
+  * glossaire.html : 54 termes, ancres #terme, schema DefinedTermSet,
+    71 liens internes, lien « Glossaire » dans le footer des 115 pages
+  * FAQ 5 questions PAA sur les 6 pages rubrique (details stylés
+    .faq-block + schema FAQPage + disclaimer non-conseil)
+  * Fix scroll horizontal desktop : html{overflow-x:clip} (les dropdowns
+    cachés gardaient leur boîte 640px dans la zone de scroll) — clip ≠
+    hidden : ne crée pas de conteneur de scroll, le sticky survit (vérifié)
 - 23 articles signés, dont 3 publiés cette session :
   * SpaceX AI1 / échelle de Kardachev (S. Joumel, 10 juin, édito
     géopolitique, ~3000 mots) — brief fourni par Sébastien, faits
@@ -65,13 +78,12 @@ RESPONSIVE + UX (fait cette session)
 - 3 paliers responsive : 380/560/960px
 
 INDEXATION
-- GSC : propriété http://journal-des-investisseurs.fr/ VALIDÉE (balise
-  meta dans index.html). Sitemap soumis. ⚠️ SÉBASTIEN DOIT : créer la
-  propriété https:// (validation auto-héritée) + y soumettre sitemap.xml
+- GSC : propriétés http:// ET https:// VALIDÉES (https créée par
+  Sébastien le 11 juin, sitemap soumis sur les deux)
 - IndexNow opérationnel : clé 34853aeed5aae6cfaf10efcceae4e47e, script
   ./ping-indexnow.sh [url] (sans arg = tout le sitemap). Utilisé après
   chaque publication.
-- sitemap.xml : 111 URLs https, robots.txt OK
+- sitemap.xml : 113 URLs https (+3 pages auteur +glossaire), robots.txt OK
 - Schema.org NewsArticle sur les 23 articles
 - Favicons complets (ICO multi-taille + PNG + manifest) sur 113 pages
 
@@ -121,13 +133,11 @@ WORKFLOW DE PUBLICATION D'UN ARTICLE
 9. Start-Process l'URL live https:// pour validation visuelle
 
 À FAIRE PAR SÉBASTIEN (UI)
-- GSC : créer propriété https:// + soumettre sitemap (2 min)
-- FormSubmit : récupérer le token (cf. supra)
+- FormSubmit : transmettre le token à Claude (Sébastien dit l'avoir
+  récupéré le 11 juin mais ne l'a jamais collé en conversation)
 - Bing Webmaster : import 1 clic depuis GSC (optionnel)
 
 PROCHAINS CHANTIERS POSSIBLES
-- 3 pages auteur individuelles (E-E-A-T) : a-propos-sebastien/kevin/bertrand
-- Glossaire financier (~50 termes) + FAQ par rubrique (PAA Google)
 - Rythme 1-2 articles/semaine (objectif 30-40 articles)
 - Recensions sources validées : Arte +++, GDIY, Hasheur, Yann Darwin,
   Capital M6 (une recension Hasheur 'dette française et Bitcoin' était
