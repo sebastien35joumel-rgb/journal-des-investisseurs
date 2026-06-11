@@ -10,196 +10,144 @@ d'analyse financière édité par NEWP SAS, signé Sébastien Joumel (Directeur 
 publication), Kévin Papot (Rédacteur en chef), Bertrand Mathieu (Chroniqueur
 métaux précieux, fondateur de Maison Or et Bijoux).
 
-État au 31 mai 2026 — fin de session (commit 4036d27) :
+État au 11 juin 2026 — fin de session (commit 1fec2e6) :
 
-SITE EN PROD
-- URL : http://journal-des-investisseurs.fr/ (HTTPS toujours en attente
-  de Let's Encrypt, protected_domain_state=null au moment de la pause)
+SITE EN PROD — HTTPS ACTIF ✅
+- URL : https://journal-des-investisseurs.fr/ (cert Let's Encrypt émis le
+  11 juin après Remove/Re-add du custom domain dans GH Pages Settings,
+  expire 2026-09-08 renouvellement auto, https_enforced=true,
+  redirection 301 http→https active)
 - Repo : https://github.com/sebastien35joumel-rgb/journal-des-investisseurs
-- Hébergement : GitHub Pages (statique, gratuit, illimité)
-- DNS : Hostinger direct (4 A records 185.199.108-111.153 + CNAME www)
-- gh CLI authentifié sebastien35joumel-rgb (via keyring)
-- Coût annuel : ~10 € (NDD Hostinger seul)
+- Hébergement : GitHub Pages, DNS Hostinger direct (4 A records)
+- gh CLI authentifié sebastien35joumel-rgb
+- TOUT le code est en https:// (sitemap, robots, schema.org, og, 23 articles)
 
-CONTENU EN PROD (au commit 4036d27)
-- 112 fichiers HTML (109 publics + 404 + _templates + merci.html noindex)
-- sitemap.xml = 106 URLs publiques en HTTP (déclaration adaptée à la
-  propriété GSC qui est en http://, à rebasculer en https:// au switch)
-- 20 articles maîtres signés Bertrand/Sébastien/Kévin
-  (le dernier en date du 31 mai : recension Arte 'Inflation, la grande
-  peur' MONEY/Mordillat-Clerc, signé Sébastien, 3930 mots, format
-  signature avec citations vérifiées d'André Orléan en blockquotes)
-- 6 rubriques + 72 sous-rubriques distinctes (SEO longue traîne)
-- archives.html, index.html (home magazine)
-- Pages institutionnelles : a-propos, annoncer, contact, mentions-legales
-- Pages rédaction : devenir-contributeur + article-invite avec garde-fous
-  URSSAF de niveau STRICT (cf. infra) : déclaration d'intérêt non
-  contractuelle, absence de subordination, bascule freelance prévue,
-  sujets en cases à cocher groupées, validation URL stricte avec message
-  custom, droit à l'image, illustrations libres de droits/sourcées
-- merci.html (thank-you post-formulaire, noindex, message contextualisé en JS
-  selon ?from=contact/contributeur/article-invite/annoncer)
-- Form action vers https://formsubmit.co/contact@newp.fr (mode email-clair,
-  À MIGRER en mode token cf. tâche #30 + section ci-dessous)
-- TOUS les articles ont leur Schema.org NewsArticle JSON-LD (auto-script
-  /tmp/jdi-schema/generate.mjs idempotent, réutilisable pour futurs articles)
+CONTENU EN PROD (113 fichiers HTML)
+- 23 articles signés, dont 3 publiés cette session :
+  * SpaceX AI1 / échelle de Kardachev (S. Joumel, 10 juin, édito
+    géopolitique, ~3000 mots) — brief fourni par Sébastien, faits
+    vérifiés WebSearch (AI1 dévoilé 8 juin : 150 kW, 70 m, 600 km,
+    Gigasat Texas, 1 GW fin 2027)
+  * Bitcoin sous 60 000 $ (K. Papot, 11 juin, ~2400 mots) — source
+    article Invezz/TradingView fourni par Sébastien ; suite directe de
+    l'article du 18 mai « signal d'achat ou clairon final ? » avec
+    retour honnête sur les scénarios
+  * L'or corrige : respiration ou retournement ? (B. Mathieu, 11 juin,
+    ~2200 mots) — texte écrit par Bertrand lui-même (post FB CollectOr
+    Cannes), transposé au format Journal, lien attribution nofollow
+    vers https://www.facebook.com/CollectOrCannes en note de fin
+  Les 3 forment un triptyque cohérent sur les flux de capitaux (IA
+  aspire → cryptos se vident → l'or respire mais tient sa MM 36 mois)
+- 6 rubriques + 72 sous-rubriques + archives + home + pages instit
+- Formulaires contributeur avec garde-fous URSSAF stricts
+- merci.html (thank-you, noindex, orpheline par design)
 
-PACK FAVICONS (nouveau cette session)
-- favicon.ico multi-taille (16+32+48) — pour GSC + Google Search + Bing
-- favicon-16/32/48.png, apple-touch-icon.png (180), android-chrome-192/512.png
-- site.webmanifest (PWA + Android)
-- favicon.svg conservé (browsers modernes)
-- Toutes les 111 pages déclarent le bloc <link rel="icon"> complet
+MAILLAGE INTERNE 100% COMPLET (fait cette session, commit 1fec2e6)
+- 0 page orpheline (hors merci.html voulu)
+- 0 lien vers les templates bloqués (72 liens corrigés : 13 cartes
+  fictives des rubriques supprimées + 7 vraies injectées, 50 <li>
+  'À lire également' fictifs remplacés par de vrais articles, 2
+  breadcrumbs réparés, 20 cartes familles recâblées)
+- 0 lien mort
+- 23/23 articles maillés : rubrique ≥1 + sous-rubrique ≥1 + archives
+  + inter-articles ≥2
+- Scripts réutilisables dans /tmp/jdi-mesh/ (fix-rubriques.mjs,
+  fix-links.mjs) — à recréer au besoin, hors repo
 
-INDEXATION (nouveau cette session)
-- Balise meta google-site-verification ACTIVE dans <head> index.html
-  (content="QOdSp9fQk9yoh3NzTrlkL5RZDmXepKyCIjRgh9ySV24")
-- Propriété GSC validée par Sébastien : http://journal-des-investisseurs.fr/
-- Sitemap soumis dans GSC le 30 mai (1ère soumission en erreur car mismatch
-  https:// → corrigé en patchant sitemap+robots en http, à RE-SOUMETTRE par
-  Sébastien : clic Renvoyer sur la ligne /sitemap.xml dans GSC > Sitemaps)
-- IndexNow opérationnel : clé 34853aeed5aae6cfaf10efcceae4e47e
-  Fichier .txt déployé à la racine
-  105 URLs déjà pingées vers Bing+Yandex (HTTP 200/202)
-  Script ./ping-indexnow.sh [url] pour futures publications
-- Emplacement meta msvalidate.01 préparé en commentaire (à activer si
-  Sébastien crée propriété Bing manuelle ; sinon import 1 clic depuis GSC)
+RESPONSIVE + UX (fait cette session)
+- Nav rubriques STICKY en desktop (position:sticky top:0 z-100),
+  désactivée en mobile <960px (volontaire, la nav y est empilée)
+- ⚠️ PIÈGE CSS documenté : ne JAMAIS mettre overflow-x:hidden sur
+  html/body/.sheet — ça casse position:sticky. L'anti-débordement
+  est assuré au niveau des enfants (max-width:100% global,
+  table overflow-x:auto)
+- Footer blindé mobile (flex-wrap, safe-area-inset iOS)
+- 3 paliers responsive : 380/560/960px
 
-FOOTER UNIVERSEL (cohérent sur les 108 pages publiques)
-Accueil · Archives · La Rédaction · Annoncer · Contact ·
-Intégrer la rédaction · Mentions légales
+INDEXATION
+- GSC : propriété http://journal-des-investisseurs.fr/ VALIDÉE (balise
+  meta dans index.html). Sitemap soumis. ⚠️ SÉBASTIEN DOIT : créer la
+  propriété https:// (validation auto-héritée) + y soumettre sitemap.xml
+- IndexNow opérationnel : clé 34853aeed5aae6cfaf10efcceae4e47e, script
+  ./ping-indexnow.sh [url] (sans arg = tout le sitemap). Utilisé après
+  chaque publication.
+- sitemap.xml : 111 URLs https, robots.txt OK
+- Schema.org NewsArticle sur les 23 articles
+- Favicons complets (ICO multi-taille + PNG + manifest) sur 113 pages
 
-STRUCTURE DA (à respecter pour tout nouveau contenu)
-- Palette : ivoire #F1E8D0, encre #141414, sépia #5A4A35
-- Polices : IM Fell English (SC + italique) titres, Old Standard TT corps,
-  Special Elite ticker
-- Pastiche : édition numérotée, latin "Pecunia non olet sed ratio computandi
-  olet", pigeon voyageur dans contact, sceaux SVG par rédacteur (SJ+plume /
-  KP+laurier / BM+soleil radieux)
-- Voix éditoriale : 1500-2500 mots, drop cap, H2 surlignés filet noir, 4-6 H2,
-  blockquote au milieu, 1-2 encarts partenaires (vente de liens), signature
-  pied avec sceau du rédacteur, 4 articles connexes
-- Format article HTML autoporteur (header + nav 6 rubriques avec mega-menus
-  + breadcrumb + page-header + corps + sceau + related + footer)
+RÈGLES STRICTES POSÉES PAR SÉBASTIEN (à respecter absolument)
+1. AUCUN tool payant (Apify actors, etc.) sans validation explicite
+   préalable via question. Même 0,005 $. Pour transcription YouTube :
+   demander à Sébastien de copier le panneau 'Afficher la transcription'
+   de YouTube, ou yt-dlp local.
+2. Liens Maison Or et Bijoux (https://maison-or-bijoux-cannes.com/) :
+   DOFOLLOW sur l'ancre de marque, OBLIGATOIRE dans la signature de
+   chaque article de Bertrand, pas nécessairement dans le corps.
+   target=_blank rel=noopener (PAS de nofollow sur la marque).
+3. Derniers articles TOUJOURS mis en avant sur la home (hero +
+   grille 'Les dernières publications' antéchronologique + topbar
+   date/édition à jour : édition 2368 = 11 juin)
+4. Le site doit être responsive+++, menu sticky desktop, footer
+   toujours présent
+5. Recensions vidéo : JAMAIS paraphraser un contenu non vu. Soit
+   transcription réelle fournie, soit recension d'invitation honnête.
+6. Pour tester un FORMULAIRE : toujours l'URL live https://, jamais
+   le fichier local (file:// bloqué par FormSubmit)
 
-DOCUMENTS DE RÉFÉRENCE À LA RACINE DU REPO
-- README.md, DEPLOIEMENT.md, GUIDE_INDEXATION.md, PROMPT_REPRISE.md (ce fichier)
-- ping-indexnow.sh : wrapper bash pour ping IndexNow
+FORMSUBMIT (état)
+- Formulaire contact ACTIVÉ (les mails arrivent sur contact@newp.fr)
+- Les candidatures contributeur arrivent aussi
+- ⚠️ _next (redirect vers merci.html) ne marche PAS encore : il faut
+  migrer en mode TOKEN. Sébastien doit récupérer le token dans le
+  pied de page d'un mail FormSubmit reçu (ligne formsubmit.co/el/xxx)
+  et le donner à Claude qui remplacera les 3 endpoints.
+- Champs URL facultatifs (portrait, échantillon) : type=url avec
+  validation JS custom, vide=OK
 
-À FAIRE IMMÉDIATEMENT (action de Claude au démarrage de la prochaine session)
-1. Vérifier état HTTPS :
-   gh api repos/sebastien35joumel-rgb/journal-des-investisseurs/pages \
-     | grep -E 'protected_domain_state|https_enforced'
-   Si protected_domain_state=verified :
-   a) gh api -X PUT .../pages -f https_enforced=true
-   b) sed -i 's|http://|https://|g' sitemap.xml robots.txt + commit + push
-   c) Demander à Sébastien de créer une nouvelle propriété GSC en https://
-      (la balise meta est déjà déployée → validation auto-héritée)
-   Sinon : c'est normal, encore en attente Let's Encrypt
-2. Demander à Sébastien sur quoi il veut avancer
+WORKFLOW DE PUBLICATION D'UN ARTICLE
+1. Créer article-[slug].html (copier structure d'un article existant
+   du même auteur pour le sceau SVG : SJ=plume, KP=laurier, BM=soleil)
+2. Schema.org NewsArticle inclus dès création (tout en https://)
+3. Ticker custom thématique, topbar à la date du jour, nav avec
+   is-active sur la bonne rubrique, breadcrumb vers la sous-rubrique
+4. Encart partenaire cohérent (Bertrand=Maison Or et Bijoux dofollow,
+   SJ macro=Cabinet Saint-Honoré, KP crypto=Bitstack ou Coffre-Fort
+   Numérique)
+5. Related-articles : 4 vrais articles, maillage croisé
+6. MAILLAGE OBLIGATOIRE : sitemap.xml + sous-rubrique concernée +
+   archives (compteur section) + home (hero ou grille + topbar)
+7. git add + commit + push (deploy <2 min)
+8. bash ping-indexnow.sh /article-[slug].html
+9. Start-Process l'URL live https:// pour validation visuelle
 
-À FAIRE PAR SÉBASTIEN (actions UI, non automatisables)
-1. RE-SOUMETTRE le sitemap dans GSC : Sitemaps > clic Renvoyer sur la ligne
-   /sitemap.xml en erreur (le sitemap est maintenant en HTTP, ça devrait
-   passer en Réussite avec 105 URLs)
-2. MIGRER FORMSUBMIT EN MODE TOKEN (priorité, débloque thank-you page) :
-   - Trouver le token dans pied de page d'un mail FormSubmit reçu sur
-     contact@newp.fr (ligne https://formsubmit.co/el/xxxxxx ou similaire)
-   - Coller le token à Claude → Claude remplace les 3 endpoints
-   - Avantages : 1 seule activation pour tous les _subject, _next fonctionne,
-     email caché du HTML, _autoresponse débloqué
-3. (Optionnel) Bing Webmaster Tools — import 1 clic depuis GSC
+À FAIRE PAR SÉBASTIEN (UI)
+- GSC : créer propriété https:// + soumettre sitemap (2 min)
+- FormSubmit : récupérer le token (cf. supra)
+- Bing Webmaster : import 1 clic depuis GSC (optionnel)
 
-PROBLÈME CONNU : THANK-YOU PAGE
-La page /merci.html est créée et accessible, le _next est configuré dans les
-3 formulaires (?from=contact/contributeur/article-invite), MAIS FormSubmit
-en mode email-clair ignore parfois le _next et affiche sa page par défaut.
-Solution = migration mode token (cf. ci-dessus).
-
-PROCHAINS CHANTIERS POSSIBLES (à demander à Sébastien)
-- Schema.org NewsArticle JSON-LD sur les 19 articles (rich snippets Google +
-  éligibilité Google News) — ROI SEO élevé, ~30min de boulot
-- Plus d'articles (objectif 30-40 à 3 mois, alterner Bertrand/Sébastien/Kévin)
-- Recensions documentaires (format signature) : sources validées =
-  Arte +++, GDIY (Matthieu Stefani), Hasheur (Owen Simonin), Yann Darwin,
-  Capital M6. Workflow : Sébastien envoie lien YouTube → Claude récupère
-  source officielle via WebSearch → recension honnête (PAS de paraphrase
-  inventée du contenu vidéo)
-- Glossaire financier + FAQ par rubrique (cible PAA Google)
-- Démarchage premiers annonceurs (cabinets gestion, comptoirs aurifères,
-  courtiers crédit, plateformes crypto agréées)
-- Page profile auteur individuel par rédacteur
-
-RÈGLES STRICTES POSÉES PAR SÉBASTIEN
-- AUCUN tool payant sans validation explicite préalable via AskUserQuestion.
-  Même 0,005 $ = interdit sans OUI explicite. Vaut pour Apify (actors payants),
-  tout MCP avec pricing, toute action qui pourrait consommer un crédit. Si
-  un coût même minime est affiché, demander d'abord, agir ensuite seulement
-  si OUI explicite. (Règle posée le 31 mai 2026 suite à appel d'un Apify
-  actor sans validation — environ 0,005 $.)
-- Pour récupérer une transcription YouTube : utiliser yt-dlp en local
-  (gratuit) ou demander à Sébastien si l'option payante est acceptable.
-
-GARDE-FOUS URSSAF (devenir-contributeur + article-invite)
-- Pages refondues pour positionner clairement la démarche comme
-  'déclaration d'intérêt à l'initiative du contributeur', PAS comme
-  candidature à un poste ni demande de prestation
-- Encart 'Nature de la démarche' en haut du formulaire principal
-- Champ Fréquence/Cadence reformulé : retiré 'Mensuel/Hebdomadaire' qui
-  créaient obligation, remplacé par '1 article / 1-2/an / 3-6/an /
-  au-delà = freelance recommandé'
-- 3 nouvelles clauses juridiques sur devenir-contributeur (§0 absence
-  subordination, §9 non-salariat non-prestation rappelant L1221-1 Code
-  travail + Code civil, §10 bascule freelance) et 2 sur article-invite
-  (§0 nature, §7 non-salariat)
-- Cases obligatoires enrichies avec mention 'à ma seule initiative,
-  sans subordination, sans calendrier imposé'
-- Vocabulaire neutralisé : 'candidature' → 'déclaration d'intérêt',
-  'Intégrer la rédaction' (titre H1) → 'Proposer des contributions au
-  Journal', 'Format attendu' → 'Format souhaité'
+PROCHAINS CHANTIERS POSSIBLES
+- 3 pages auteur individuelles (E-E-A-T) : a-propos-sebastien/kevin/bertrand
+- Glossaire financier (~50 termes) + FAQ par rubrique (PAA Google)
+- Rythme 1-2 articles/semaine (objectif 30-40 articles)
+- Recensions sources validées : Arte +++, GDIY, Hasheur, Yann Darwin,
+  Capital M6 (une recension Hasheur 'dette française et Bitcoin' était
+  en attente de transcription — vidéo K06XHF-1Qy8)
+- Démarchage annonceurs (la raison d'être commerciale du site)
 
 CONTEXTE INDISPENSABLE
-- Voix narrative : "nous" (Sébastien + Kévin), vouvoiement, jamais "chez le
-  JDI on..."
-- Bertrand signe métaux précieux uniquement
-- Sébastien et Kévin alternent sur les autres rubriques
-- Ne JAMAIS prétendre paraphraser une vidéo non accessible — recension
-  d'invitation, citer la source ouvertement
-- Adresse éditeur : NEWP SAS, 4 Route du Sept Un, 16100 Boutiers-Saint-Trojan,
-  SIREN 830 852 976
-- Téléphone retiré partout (seul contact@newp.fr public)
-- Pigeon voyageur dans contact.html à conserver (pastiche signature)
-- Formulaires contributeur : 18 sujets cochables (6 rubriques × 3 sous-thèmes)
-  + champ libre "Autre sujet", validation JS ≥1 case cochée
-- Champs URL facultatifs (portrait, échantillon, site, linkedin) ont
-  validation custom : vide=OK, URL valide=OK, texte libre=BLOQUÉ avec
-  message clair + bordure rouge sépia
-
-WORKFLOW DE PUBLICATION
-1. Créer article-[slug].html dans le dossier
-2. Vérifier meta title/description + canonical + OG spécifiques
-3. Ajouter dans la rubrique correspondante + section "Toutes nos publications"
-   de index.html si majeur
-4. Ajouter ligne dans sitemap.xml (URL en HTTP tant qu'on est sur HTTP)
-5. git add . && git commit -m "Article : [titre]" && git push
-6. GitHub Pages publie en < 2 min
-7. ./ping-indexnow.sh /article-[slug].html (ping Bing/Yandex instantané)
-
-WORKFLOW DE VALIDATION VISUELLE
-- Pour vérifier le RENDU visuel (CSS, layout, responsive) :
-  Start-Process "C:\Users\sebas\Downloads\Claude\journal-investisseurs\[fichier].html"
-- Pour tester un FORMULAIRE (soumission, validation, FormSubmit) :
-  TOUJOURS ouvrir l'URL en ligne, jamais le fichier local
-  (file:// est bloqué par FormSubmit)
-  Start-Process "http://journal-des-investisseurs.fr/[fichier].html"
+- Voix : "nous" (Sébastien+Kévin), vouvoiement, registre vieux journal
+- DA : ivoire #F1E8D0, encre #141414, sépia #5A4A35 UNIQUEMENT ;
+  IM Fell English (titres), Old Standard TT (corps), Special Elite
+- Éditeur : NEWP SAS, 4 Route du Sept Un, 16100 Boutiers-Saint-Trojan,
+  SIREN 830 852 976. Seul contact public : contact@newp.fr
+- Bertrand signe métaux uniquement ; SJ et KP alternent le reste
+- merci.html orpheline par design — ne pas la "réparer"
 
 MÉMOIRE LONGUE
-Lire en mémoire :
-- project_journal_investisseurs.md (état complet du projet)
-- Workflow validation HTML Verte (appliqué au JDI aussi)
+Lire project_journal_investisseurs.md en mémoire pour le détail.
 
-Démarre par : (1) vérifier état HTTPS et basculer si vert ; (2) curl rapide
-home + sitemap pour vérifier que tout répond ; (3) attendre les instructions.
+Démarre par : (1) vérifier que https://journal-des-investisseurs.fr/
+répond 200 + sitemap OK ; (2) attendre les instructions de Sébastien.
 ```
 
 ---
@@ -208,31 +156,22 @@ home + sitemap pour vérifier que tout répond ; (3) attendre les instructions.
 
 1. Ouvre une nouvelle conversation Claude
 2. Copie-colle le bloc en code ci-dessus comme premier message
-3. Claude reprendra le projet exactement où on l'a laissé, avec tout le contexte
+3. Claude reprendra le projet exactement où on l'a laissé
 
-## Pourquoi un prompt de transition ?
+## Historique des commits majeurs de la session du 10-11 juin
 
-- Une conversation Claude finit par accumuler beaucoup de contexte (cette session a produit ~50 000 mots de contenu + 111 fichiers HTML + 8 favicons + scripts)
-- Repartir d'un prompt structuré garantit que le nouveau Claude a accès au strict nécessaire sans surcharge
-- La memory `project_journal_investisseurs.md` persiste entre conversations donc le détail complet est disponible si besoin
-
-## Historique récent des commits majeurs
-
-| Commit | Message | Date |
-|---|---|---|
-| `4036d27` | feat(article): enrichissement Arte 'Inflation, la grande peur' (3930 mots, citations Orléan) | 31 mai |
-| `91e5337` | feat(article): recension Arte 'Inflation, la grande peur' v1 (2100 mots) | 31 mai |
-| `60390e3` | feat(seo): Schema.org NewsArticle JSON-LD sur les 19 articles | 31 mai |
-| `f316452` | feat(legal): garde-fous URSSAF sur devenir-contributeur (strict) | 31 mai |
-| `6f0737d` | feat(forms): validation URL stricte + message custom clair | 30 mai |
-| `457c393` | ux(forms): clarifier 'laisser vide si pas de lien' | 30 mai |
-| `b04a37a` | fix(forms): champs Portrait + Échantillon en type=text | 30 mai |
-| `7c1b226` | fix(seo): sitemap + robots.txt en HTTP pour matcher GSC | 30 mai |
-| `24e431e` | feat(seo): favicons complets (ICO + PNG + manifest) | 30 mai |
-| `09a086a` | feat(seo): balise google-site-verification active | 30 mai |
-| `cf7be34` | feat(seo): IndexNow actif (105 URLs pingées) + script | 30 mai |
-| `f405fd0` | feat(forms): page merci.html dédiée + redirection _next | 30 mai |
-| `bc85a87` | fix(footer): ajout 'Intégrer la rédaction' sur 13 pages | 30 mai |
-| `23d3916` | feat(contrib): sujets de prédilection en cases à cocher | 30 mai |
+| Commit | Contenu |
+|---|---|
+| `1fec2e6` | Maillage interne complet : 0 orpheline, 0 lien template, 72 fixes |
+| `c1390b6` | Article or correction/respiration (B. Mathieu, 23e) |
+| `2d4140f` | Article Bitcoin sous 60 000 $ (K. Papot, 22e) |
+| `2db383f` | Bascule HTTPS complète (sitemap+robots+23 HTML) |
+| `39af2d1` | Fix sticky nav (retrait overflow-x:hidden des parents) |
+| `1617b14` | Nav sticky desktop + anti-overflow + footer blindé |
+| `57f9afa` | Article SpaceX AI1 / Kardachev (S. Joumel, 21e) |
+| `7fc848c` | 12 liens dofollow Maison Or et Bijoux + home fraîcheur |
+| `4036d27` | Enrichissement article Arte inflation (3930 mots, Orléan) |
+| `60390e3` | Schema.org NewsArticle sur tous les articles |
+| `f316452` | Garde-fous URSSAF devenir-contributeur |
 
 ·
