@@ -72,6 +72,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://journal-des-investisseurs.fr/article-or-correction-respiration.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- ARTICLES PATRIMOINE + IMMOBILIER (Sébastien Joumel) -->
   <url>
