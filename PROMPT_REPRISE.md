@@ -106,13 +106,14 @@ RÈGLES STRICTES POSÉES PAR SÉBASTIEN (à respecter absolument)
 6. Pour tester un FORMULAIRE : toujours l'URL live https://, jamais
    le fichier local (file:// bloqué par FormSubmit)
 
-FORMSUBMIT (état)
+FORMSUBMIT (état — CLOS 2026-06-12)
 - Formulaire contact ACTIVÉ (les mails arrivent sur contact@newp.fr)
 - Les candidatures contributeur arrivent aussi
-- ⚠️ _next (redirect vers merci.html) ne marche PAS encore : il faut
-  migrer en mode TOKEN. Sébastien doit récupérer le token dans le
-  pied de page d'un mail FormSubmit reçu (ligne formsubmit.co/el/xxx)
-  et le donner à Claude qui remplacera les 3 endpoints.
+- _next (redirect vers merci.html) FONCTIONNE — confirmé par test de
+  Sébastien le 12 juin (la note « token obligatoire » datait d'un test
+  antérieur à l'activation complète, elle est périmée). Migration token
+  NON nécessaire ; seul intérêt résiduel = masquer contact@newp.fr dans
+  le code source (anti-spam). Décision : on laisse tel quel.
 - Champs URL facultatifs (portrait, échantillon) : type=url avec
   validation JS custom, vide=OK
 
@@ -133,8 +134,6 @@ WORKFLOW DE PUBLICATION D'UN ARTICLE
 9. Start-Process l'URL live https:// pour validation visuelle
 
 À FAIRE PAR SÉBASTIEN (UI)
-- FormSubmit : transmettre le token à Claude (Sébastien dit l'avoir
-  récupéré le 11 juin mais ne l'a jamais collé en conversation)
 - Bing Webmaster : import 1 clic depuis GSC (optionnel)
 
 PROCHAINS CHANTIERS POSSIBLES
