@@ -116,6 +116,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://journal-des-investisseurs.fr/article-pre-etat-date-copropriete.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ARTICLES STRATÉGIE (Sébastien Joumel) -->
   <url>
