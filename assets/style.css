@@ -186,6 +186,7 @@ nav.rubriques .rub.is-active > a{
   left:50%;
   transform:translateX(-50%) translateY(-6px);
   width:640px;
+  max-width:none;
   background:var(--paper-2);
   border:2px solid var(--ink);
   border-top:none;
