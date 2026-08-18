@@ -147,7 +147,7 @@ CONTEXTE INDISPENSABLE
 - Voix : "nous" (Sébastien+Kévin), vouvoiement, registre vieux journal
 - DA : ivoire #F1E8D0, encre #141414, sépia #5A4A35 UNIQUEMENT ;
   IM Fell English (titres), Old Standard TT (corps), Special Elite
-- Éditeur : NEWP SAS, 4 Route du Sept Un, 16100 Boutiers-Saint-Trojan,
+- Éditeur : NEWP SAS, 33 route de Porte Fache, 16100 Boutiers-Saint-Trojan,
   SIREN 830 852 976. Seul contact public : contact@newp.fr
 - Bertrand signe métaux uniquement ; SJ et KP alternent le reste
 - merci.html orpheline par design — ne pas la "réparer"

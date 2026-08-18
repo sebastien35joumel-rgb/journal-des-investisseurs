@@ -86,4 +86,4 @@ Modifier `assets/style.css`. La DA est centralisée dans ce fichier unique parta
 
 Tous les contenus rédactionnels et la charte graphique sont propriété de **NEWP SAS**. Tous droits réservés.
 
-© 2026 Le Journal des Investisseurs · NEWP SAS · 4 Route du Sept Un · 16100 Boutiers-Saint-Trojan
+© 2026 Le Journal des Investisseurs · NEWP SAS · 33 route de Porte Fache · 16100 Boutiers-Saint-Trojan
