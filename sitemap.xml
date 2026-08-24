@@ -134,6 +134,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://journal-des-investisseurs.fr/article-rentabilite-locative-calcul.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ARTICLES STRATÉGIE (Sébastien Joumel) -->
   <url>
