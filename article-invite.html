@@ -108,118 +108,7 @@
     <section>
       <h2>Proposer un article</h2>
 
-      <form id="inviteForm" class="form-vintage" method="POST" action="https://formsubmit.co/contact@newp.fr">
-        <input type="hidden" name="_subject" value="Proposition d'article invité — Le Journal des Investisseurs">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://journal-des-investisseurs.fr/merci.html?from=article-invite">
-        <input type="text" name="_honey" style="display:none">
-
-        <h3>Votre proposition</h3>
-
-        <div class="field-group">
-          <div class="field">
-            <label for="prenom">Prénom <span style="color:#6b1a1a">*</span></label>
-            <input type="text" id="prenom" name="Prénom" required>
-          </div>
-          <div class="field">
-            <label for="nom">Nom <span style="color:#6b1a1a">*</span></label>
-            <input type="text" id="nom" name="Nom" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email">Adresse de courrier électronique <span style="color:#6b1a1a">*</span></label>
-          <input type="email" id="email" name="Email" required>
-        </div>
-
-        <div class="field">
-          <label for="qualite">Votre qualité ou fonction <span style="color:#6b1a1a">*</span></label>
-          <input type="text" id="qualite" name="Qualité" required placeholder="Ex. : Notaire à Paris, spécialisée en succession">
-        </div>
-
-        <div class="field">
-          <label for="rubrique">Rubrique visée <span style="color:#6b1a1a">*</span></label>
-          <select id="rubrique" name="Rubrique visée" required>
-            <option value="">— Choisir une rubrique —</option>
-            <option>Bourse</option>
-            <option>Immobilier</option>
-            <option>Métaux Précieux</option>
-            <option>Cryptomonnaies</option>
-            <option>Patrimoine</option>
-            <option>Stratégie</option>
-            <option>Recension documentaire</option>
-            <option>Autre (préciser dans le pitch)</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="titre">Titre proposé pour l'article <span style="color:#6b1a1a">*</span></label>
-          <input type="text" id="titre" name="Titre proposé" required maxlength="160" placeholder="Un titre clair, sans sensationnalisme">
-          <span class="field-help">160 caractères maximum.</span>
-        </div>
-
-        <div class="field">
-          <label for="pitch">Pitch et plan de l'article <span style="color:#6b1a1a">*</span></label>
-          <textarea id="pitch" name="Pitch et plan" rows="8" required placeholder="Résumez en quelques lignes l'angle de votre article, ses 3-5 axes principaux, les sources chiffrées que vous mobiliserez, et la conclusion actionnable pour le lecteur."></textarea>
-          <span class="field-help">500 à 1 500 caractères recommandés.</span>
-        </div>
-
-        <div class="field">
-          <label for="bio">Courte bio (sera utilisée en signature) <span style="color:#6b1a1a">*</span></label>
-          <textarea id="bio" name="Bio" rows="4" required placeholder="Quelques lignes pour vous présenter et asseoir votre légitimité sur le sujet."></textarea>
-        </div>
-
-        <div class="field-group">
-          <div class="field">
-            <label for="site">Site web personnel</label>
-            <input type="url" id="site" name="Site web" placeholder="https://...">
-          </div>
-          <div class="field">
-            <label for="linkedin">Profil LinkedIn</label>
-            <input type="url" id="linkedin" name="LinkedIn" placeholder="https://linkedin.com/in/...">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="portrait">URL de votre portrait <em style="font-style:italic;color:#5A4A35;font-weight:400">(facultatif)</em></label>
-          <input type="url" id="portrait" name="URL portrait" placeholder="https://drive.google.com/...  —  ou laissez vide">
-          <span class="field-help"><strong>Si vous n'avez pas de lien&nbsp;: laissez ce champ vide</strong>, nous vous solliciterons par courriel après acceptation. Sinon&nbsp;: lien vers une photo hébergée (Google Drive, Dropbox, iCloud, OneDrive, page LinkedIn, etc.). Recommandé : portrait sobre, cadrage serré, fond neutre, résolution minimale 500&nbsp;×&nbsp;500 pixels.</span>
-        </div>
-
-        <div class="field">
-          <label for="conflits">Conflits d'intérêt à déclarer</label>
-          <textarea id="conflits" name="Conflits d'intérêt" rows="2" placeholder="Le cas échéant : appartenance à une société, fonction dans un cabinet, participation à un fonds, etc."></textarea>
-          <span class="field-help">La transparence vaut crédibilité.</span>
-        </div>
-
-        <div class="field">
-          <label for="visuels">Visuels d'accompagnement envisagés</label>
-          <textarea id="visuels" name="Visuels et sources" rows="3" placeholder="Si vous prévoyez de fournir des illustrations, indiquez ici leur nature et leur source : visuels personnels, banques d'images libres (Unsplash, Pexels, CC0), ou tiers identifiés (auteur, licence, lien de contact)."></textarea>
-          <span class="field-help">Facultatif à ce stade. Aucun visuel non sourcé ne sera publié.</span>
-        </div>
-
-        <div class="legal-block">
-          <p><strong>Cession des droits.</strong> En proposant votre article, vous reconnaissez et acceptez les termes suivants en cas d'acceptation par la rédaction :</p>
-          <p><strong>0. Nature de la démarche.</strong> Votre proposition est faite à <strong>votre seule initiative</strong>, sur un sujet librement choisi. Elle ne crée <strong>aucun lien de subordination, aucune obligation de production future, aucun engagement de rémunération</strong>. Vous pouvez la retirer à tout moment, sans préavis et sans motif, par notification à <em>contact@newp.fr</em>.</p>
-          <p><strong>1. Caractère bénévole.</strong> Publication à titre <strong>bénévole et non rémunérée</strong>, à l'initiative exclusive de l'auteur, sans aucun lien de <strong>salariat, de subordination ni de prestation de services</strong> avec NEWP SAS, société éditrice du Journal des Investisseurs.</p>
-          <p><strong>2.</strong> Cession <strong>gratuite, non exclusive, mondiale et pour la durée légale de protection des droits d'auteur</strong> des droits de reproduction, représentation, adaptation, traduction et diffusion de l'article remis, sur tout support actuel ou futur lié au Journal et à ses canaux de communication.</p>
-          <p><strong>3.</strong> Autorisation d'utiliser votre <strong>nom, prénom, qualité, biographie et liens professionnels</strong> dans la signature de l'article et la communication afférente.</p>
-          <p><strong>3 bis. Droit à l'image.</strong> Vous autorisez NEWP SAS à utiliser, à <strong>titre gratuit, non exclusif, pour le monde entier et pour toute la durée légale de protection des droits</strong>, le portrait que vous nous transmettrez (ci-dessus ou ultérieurement par courrier électronique), pour la signature de votre article et la communication associée (site, réseaux sociaux du Journal, communiqués). Vous garantissez disposer pleinement des droits sur cette image. Vous pouvez à tout moment demander le retrait de votre portrait pour les communications futures par notification à <em>contact@newp.fr</em>.</p>
-          <p><strong>4. Droit moral préservé.</strong> Votre nom reste obligatoirement associé à l'article.</p>
-          <p><strong>5. Non-exclusivité.</strong> Vous restez libre de republier l'article sur d'autres supports après publication chez nous, sauf accord exclusif explicite.</p>
-          <p><strong>6. Garantie d'originalité.</strong> Vous certifiez que le contenu est original, que vous disposez des droits nécessaires et qu'il ne porte atteinte à aucun droit de tiers. Vous vous engagez à indemniser NEWP SAS contre toute revendication.</p>
-          <p><strong>6 bis. Illustrations et visuels d'accompagnement.</strong> Tout visuel (photo, graphique, infographie, schéma) joint à l'article doit relever de l'une des trois catégories suivantes : (a) <strong>libre de droits</strong> — domaine public, Creative Commons CC0, banques d'images libres (Unsplash, Pexels, Pixabay…) ; (b) <strong>de votre propre création</strong>, avec autorisation expresse des éventuelles personnes représentées ; (c) <strong>visuel de tiers sourcé précisément</strong>, avec mention complète de l'auteur, de la licence applicable et, le cas échéant, d'un lien permettant de le contacter. Vous garantissez avoir vérifié les conditions de licence de chaque illustration et vous vous engagez à indemniser NEWP SAS contre toute revendication d'un tiers (photographe, ayant droit, personne représentée). La rédaction se réserve le droit de refuser ou retirer tout visuel insuffisamment sourcé.</p>
-          <p><strong>7. Non-salariat et non-prestation &mdash; rappel.</strong> Les parties reconnaissent expressément que la présente démarche n'établit <strong>aucun contrat de travail</strong> (au sens des articles L. 1221-1 et suivants du Code du travail), <strong>aucun contrat de prestation de services</strong> (au sens du Code civil), <strong>aucun mandat</strong>, <strong>aucune relation commerciale habituelle</strong>. L'auteur agit en toute autonomie, sans subordination juridique, sans contrepartie financière, sans calendrier imposé. Sa proposition est ponctuelle, isolée et peut être retirée à tout moment par simple notification à <em>contact@newp.fr</em>.</p>
-        </div>
-
-        <div class="checkbox-block">
-          <input type="checkbox" id="accept" name="Acceptation des conditions" value="OUI — accepté" required>
-          <label for="accept">J'ai lu et j'accepte intégralement les conditions ci-dessus. Je déclare proposer cet article à <strong>ma seule initiative</strong>, à titre <strong>bénévole et ponctuel</strong>, <strong>sans obligation de production future</strong> et <strong>sans lien de subordination</strong> à NEWP SAS. J'autorise par ailleurs NEWP SAS à publier mon article à titre gratuit si ma proposition est retenue, à communiquer ma bio et ma signature, ainsi qu'à utiliser le portrait que je transmettrai dans les conditions de l'article 3 bis. <span style="color:#6b1a1a;font-weight:700">(case obligatoire)</span></label>
-        </div>
-
-        <button type="submit">Soumettre ma proposition à la rédaction</button>
-      </form>
+      <p>Adressez votre proposition (titre, pitch et plan, rubrique visée, courte bio et coordonnées) par e-mail à <a href="mailto:contact@newp.fr">contact@newp.fr</a>.</p>
 
     </section>
 
@@ -240,7 +129,7 @@
     <strong>Le Journal des Investisseurs</strong> — Quotidien d'information financière et patrimoniale<br>
     Directeur de la publication : <em>Sébastien Joumel</em> · Rédacteur en chef : <em>Kévin Papot</em><br>
     <div class="footer-nav"><a href="index.html">Accueil</a> · <a href="archives.html">Archives</a> · <a href="a-propos.html">La Rédaction</a> ·
-      <a href="glossaire.html">Glossaire</a> · <a href="devenir-contributeur.html">Intégrer la rédaction</a> · <a href="annoncer.html">Annoncer</a> · <a href="contact.html">Contact</a> · <a href="mentions-legales.html">Mentions légales</a></div>
+      <a href="glossaire.html">Glossaire</a> · <a href="devenir-contributeur.html">Intégrer la rédaction</a> · <a href="annoncer.html">Annoncer</a> · <a href="mentions-legales.html">Mentions légales</a></div>
     <hr>
     Imprimé sur papier vergé sans bois · Édition électronique en sus de l'édition papier<br>
     Tous droits de reproduction réservés · © 2026 Le Journal des Investisseurs
