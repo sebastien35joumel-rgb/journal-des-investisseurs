@@ -1,5 +1,8 @@
 # Prompt de reprise — nouvelle conversation Le Journal des Investisseurs
 
+> **17/11/2026 : Bertrand Mathieu retiré du journal** (décision de Sébastien). Ses 5 chroniques rédigées par NEWP sont signées Sébastien Joumel ; « L'or corrige » (texte écrit par Bertrand) est retiré et redirigé vers rubrique-metaux.html ; a-propos-bertrand.html redirige vers a-propos.html. Ne plus le citer comme auteur ni ajouter de lien MOB en signature.
+
+
 > Copie-colle l'intégralité du bloc ci-dessous comme premier message dans une nouvelle conversation Claude. Il contient tout le contexte nécessaire pour reprendre le projet sans perte d'information.
 
 ---
